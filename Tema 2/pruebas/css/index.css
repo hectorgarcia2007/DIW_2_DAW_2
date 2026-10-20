@@ -1,0 +1,38 @@
+/* Prueba del ccs y la especificadad */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: blue;
+}
+
+P:focus {
+    background-color: yellow;
+}
+
+input:focus {
+    border: 5px solid black;
+    color: blue;
+}
+
+tr:nth-child(even){
+    background-color: gray;
+}
+
+#miParrafo {
+  color: green;
+}
+
+#miParrafo::first-letter {
+  font-size: 3rem;
+}
+
+.miClase {
+  color: orange;
+}
+
+.miClasebi {
+  color: purple;
+}
