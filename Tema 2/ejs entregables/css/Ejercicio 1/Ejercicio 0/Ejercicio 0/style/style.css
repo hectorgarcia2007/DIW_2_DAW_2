@@ -108,6 +108,12 @@ h1 h2 h3 {
 #footer {
   display: flex;
   width: 100%;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+  margin: 5% 0;
 }
 
 #site_content h3 {
@@ -127,10 +133,41 @@ h1 h2 h3 {
 .sidebar_item ul li a {
   color: #a59097;
   margin: 5%;
-  text-decoration: none;
+}
+
+.sidebar_item ul {
+  list-style-type: none;
 }
 
 .sidebar ul li {
   background: url(../img/bullet.png) no-repeat;
   text-decoration: none;
 }
+
+#content h1 {
+  margin: 5% 0 2% 0;
+}
+
+#content p {
+  margin: 2% 0;
+}
+
+#content li {
+  margin: 1% 0;
+}
+
+#content h2 {
+  color: #a59097;
+  margin: 3% 0 2% 0;
+}
+
+#content ul {
+  list-style-type: none;
+}
+
+#content ul li {
+  background: url(../img/bullet.png) no-repeat;
+  text-decoration: none;
+  padding-left: 2%;
+}
+
