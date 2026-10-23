@@ -1,0 +1,36 @@
+.contenedor {
+  display: grid;
+  width: 100%;
+  height: 250px;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+*{
+  border: 1px solid black;
+}
+
+header {
+  background-color: red;
+  grid-area: header;
+}
+nav {
+  background-color: orange;
+  grid-area: nav;
+}
+main {
+  background-color: blue;
+  grid-area: main;
+}
+aside {
+  background-color: yellow;
+  grid-area: aside;
+}
+footer {
+  background-color: green;
+  grid-area: footer;
+}
