@@ -1,0 +1,43 @@
+#contenedor {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 60px;
+  height: 80px;
+  perspective: 500px;
+}
+
+#carta {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transition: transform 1s;
+}
+
+#frontal,
+#trasero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 80px;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+}
+
+#frontal {
+  background-image: url("img/mimikyu.png");
+  transform: rotateY(180deg);
+}
+
+#trasero {
+  background-image: url("img/reverso_original.png");
+}
+
+#contenedor:hover #carta {
+  transform: rotateY(180deg);
+}

@@ -1,0 +1,11 @@
+a {
+  background-color: brown;
+  color: white;
+  transition: background-color 1s;
+}
+
+a:hover {
+  background-color: aqua;
+  color: black;
+  transition: background-color 1s;
+}
