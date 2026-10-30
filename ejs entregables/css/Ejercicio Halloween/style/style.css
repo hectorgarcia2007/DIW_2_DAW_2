@@ -1,0 +1,143 @@
+/* Global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#fondo {
+  background-image: url("../img/fondo.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 3000px;
+  height: 2000px;
+  overflow: hidden;
+}
+
+#murcielago {
+  position: absolute;
+  left: 976px;
+  top: 240px;
+  animation-name: movimientoMurcielago;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+#calabaza {
+  position: absolute;
+  left: 876px;
+  top: 1540px;
+  animation-name: movimientoCalabaza;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+  animation-direction: normal;
+}
+
+#zombie {
+  position: absolute;
+  width: 700px;
+  left: 2500px;
+  top: 1540px;
+  animation-name: movimientoZombie;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-direction: normal;
+}
+
+#bruja {
+  position: absolute;
+  left: 1400px;
+  top: 1240px;
+  animation-name: movimientoBruja;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+}
+
+#arana {
+  position: absolute;
+  left: 70px;
+  top: 100px;
+  animation-name: movimientoArana;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-direction: normal;
+}
+
+#ojo {
+  position: absolute;
+  left: 2400px;
+  top: 1400px;
+  animation-name: movimientoOjo;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-direction: alternate;
+}
+
+#fantasma {
+  position: absolute;
+  left: 400px;
+  top: 1000px;
+  animation-name: movimientoFantasma;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
+}
+
+@keyframes movimientoMurcielago {
+  to {
+    transform: translateX(500px);
+  }
+}
+
+@keyframes movimientoCalabaza {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes movimientoZombie {
+  to {
+    transform: translateX(-3000px);
+  }
+}
+
+@keyframes movimientoBruja {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes movimientoArana {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes movimientoOjo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-700px);
+  }
+}
+
+@keyframes movimientoFantasma {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotateZ(360deg);
+  }
+}
+
