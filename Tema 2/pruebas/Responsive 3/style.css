@@ -1,0 +1,28 @@
+#navegador {
+  display: flex;
+  flex-direction: row;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+}
+li {
+  margin: 80%;
+}
+
+@media (max-width: 480px) {
+  #navegador {
+    flex-direction: column;
+  }
+  ul {
+  display: flex;
+  flex-direction: column;
+}
+  li {
+    margin: 0;
+    display: inline;
+  }
+  h1 {
+    margin: auto;
+  }
+}

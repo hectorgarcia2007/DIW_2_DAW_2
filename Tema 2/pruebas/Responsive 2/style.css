@@ -1,0 +1,39 @@
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.items {
+  border: 1px solid black;
+  text-align: center;
+  margin: 2%;
+  padding: 25% 0;
+}
+
+@media (max-width: 768px) {
+  #grid4 {
+    display: none;
+  }
+  #grid3 {
+    display: none;
+  }
+  #grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  #grid4 {
+    display: none;
+  }
+  #grid3 {
+    display: none;
+  }
+  #grid2 {
+    display: none;
+  }
+
+  #grid {
+    grid-template-columns: 1fr;
+  }
+}
