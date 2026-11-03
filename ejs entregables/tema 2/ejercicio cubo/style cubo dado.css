@@ -1,0 +1,60 @@
+:root {
+  --anchoLargo: 60px;
+}
+
+#contenedor {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(30deg);
+}
+
+.cara {
+  position: absolute;
+  width: var(--anchoLargo);
+  height: var(--anchoLargo);
+  background-image: url(https://en.doc.boardgamearena.com/images/c/c5/64_64_dice.jpg);
+  background-repeat: no-repeat;
+  color: rgb(0 255 255 / 0);
+}
+
+.frontal {
+}
+.derecha {
+  background-position-x: -64px;
+  transform: rotateY(90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateX(calc(var(--anchoLargo) / 2));
+}
+.izquierda {
+  background-position-x: -253px;
+  transform: rotateY(-90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateX(calc(-1 * var(--anchoLargo) / 2));
+}
+.trasera {
+  background-position-x: -315px;
+  transform: translateZ(calc(-1 * var(--anchoLargo))) rotateY(180deg);
+}
+.arriba {
+  background-position-x: -188px;
+  transform: rotateX(90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateY(calc(-1 * var(--anchoLargo) / 2));
+}
+.abajo {
+  background-position-x: -127px;
+  transform: rotateX(-90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateY(calc(var(--anchoLargo) / 2));
+}
+
+.girarcubo {
+  animation: girarpieza 3s linear infinite;
+}
+
+@keyframes girarpieza {
+  from {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-20deg) rotateY(360deg) rotateZ(360deg);
+  }
+}

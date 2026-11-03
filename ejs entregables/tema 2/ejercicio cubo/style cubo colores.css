@@ -1,0 +1,45 @@
+:root {
+  --anchoLargo: 100px;
+}
+
+#contenedor {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg) rotateY(30deg);
+}
+
+.cara {
+  position: absolute;
+  width: var(--anchoLargo);
+  height: var(--anchoLargo);
+}
+
+.frontal {
+  background: rgb(255 0 0 / 0.5);
+}
+.derecha {
+  background: rgb(0 255 0 / 0.5);
+  transform: rotateY(90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateX(calc(var(--anchoLargo) / 2));
+}
+.izquierda {
+  background: rgb(0 0 255 / 0.5);
+  transform: rotateY(-90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateX(calc(-1 * var(--anchoLargo) / 2));
+}
+.trasera {
+  background: rgb(255 255 0 / 0.5);
+  transform: translateZ(calc(-1 * var(--anchoLargo))) rotateY(180deg);
+}
+.arriba {
+  background: rgb(0 255 255 / 0.5);
+  transform: rotateX(90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateY(calc(-1 * var(--anchoLargo) / 2));
+}
+.abajo {
+  background: rgb(255 0 255 / 0.5);
+  transform: rotateX(-90deg) translateZ(calc(var(--anchoLargo) / 2))
+    translateY(calc(var(--anchoLargo) / 2));
+}
