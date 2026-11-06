@@ -43,3 +43,101 @@
   transform: rotateX(-90deg) translateZ(calc(var(--anchoLargo) / 2))
     translateY(calc(var(--anchoLargo) / 2));
 }
+
+.girarcubo {
+  animation: girarpieza 3s linear infinite;
+}
+
+@keyframes girarpieza {
+  from {
+    transform: rotateX(-20deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-20deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+.descomponer .frontal {
+  animation: descomponerFrente 3s both;
+}
+
+@keyframes descomponerFrente {
+  to {
+    transform: rotateY(0) translateX(var(--anchoLargo));
+  }
+}
+
+.descomponer .derecha {
+  animation: descomponerDerecha 3s both;
+}
+
+@keyframes descomponerDerecha {
+  to {
+    transform: rotateY(0) translateX(calc(2 * var(--anchoLargo)));
+  }
+}
+
+.descomponer .izquierda {
+  animation: descomponerIzquierda 3s both;
+}
+
+@keyframes descomponerIzquierda {
+  to {
+    transform: rotateY(0)
+      translateX(calc(var(--anchoLargo) / (var(--anchoLargo))));
+  }
+}
+
+.descomponer .arriba {
+  animation: descomponerArriba 3s both;
+}
+
+@keyframes descomponerArriba {
+  to {
+    transform: rotateY(0) translateY(calc(-1 * var(--anchoLargo)))
+      translateX(var(--anchoLargo));
+  }
+}
+
+.descomponer .abajo {
+  animation: descomponerAbajo 3s both;
+}
+
+@keyframes descomponerAbajo {
+  to {
+    transform: rotateY(0) translateY(var(--anchoLargo))
+      translateX(var(--anchoLargo));
+  }
+}
+
+.descomponer .trasera {
+  animation: descomponerTrasero 3s both;
+}
+
+@keyframes descomponerTrasero {
+  to {
+    transform: rotateY(0) translateX(calc(3 * var(--anchoLargo)));
+  }
+}
+
+.rojo .cara {
+  background-color: red;
+}
+
+.amarillo .cara {
+  background-color: yellow;
+}
+
+.verde .cara {
+  background-color: green;
+}
+
+.azul .cara {
+  background-color: blue;
+}
+.rosa .cara {
+  background-color: pink;
+}
+.gris .cara {
+  background-color: gray;
+}
