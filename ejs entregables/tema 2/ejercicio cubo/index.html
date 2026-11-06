@@ -4,11 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style cubo dado.css">
+    <link rel="stylesheet" href="style cubo dado.css" />
     <!-- Otra forma de hacerlo: <link rel="stylesheet" href="style cubo colores.css"> -->
+    <script type="module" src="cubo.js" defer></script>
   </head>
   <body>
-    <div id="contenedor" class="girarcubo">
+    <input type="checkbox" id="activarGirar" />
+    <label for="activarGirar">Girar</label>
+    <input type="checkbox" id="activarDescomponer" />
+    <label for="activarDescomponer">Descomponer</label>
+    <select name="colores" id="selectorColores">
+      <option value="rojo">Rojo</option>
+      <option value="amarillo">Amarillo</option>
+      <option value="verde">Verde</option>
+      <option value="azul">Azul</option>
+      <option value="rosa">Rosa</option>
+      <option value="gris">Gris</option>
+    </select>
+
+    <div id="contenedor" class="">
       <div class="cara frontal">Frontal</div>
       <div class="cara derecha">Derecha</div>
       <div class="cara izquierda">Izquierda</div>
