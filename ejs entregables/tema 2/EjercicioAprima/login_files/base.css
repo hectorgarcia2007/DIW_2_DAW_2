@@ -1,0 +1,326 @@
+* {
+	font-family: Arial, Helvetica, Helv, sans-serif;
+}
+body {
+	background-color: #84C3FF;
+	font-size: small;
+}
+
+/*----------------------------------------
+Cabecera superior de todas las p�ginas:
+- Logo de la Sociedad.
+- Nombre de la Sociedad
+- Usuario
+----------------------------------------*/
+div#cabecerasociedad {
+	position: absolute;
+	top: 2px;
+	left: 0px;
+	width: 99%;
+	height: 80px;
+	color: White;
+	overflow: hidden;
+}
+#cabecerasociedad #delta{
+	position: absolute;
+	top: 5px;
+}
+
+#cabus-0 {
+	position: absolute;
+	left: 100px;
+	width: 510px;
+	top: 1px;
+}
+#cabus-0 .l1{
+	font-family: Arial;
+	font-size: 16pt;
+	font-weight: bolder;
+}
+#cabus-0 .l2{
+	font-size: 12pt;	
+	font-family: Arial;
+	font-weight: bolder;
+}
+
+#cabus-1 {
+	background-image: url(../imagenes/linea_aprima.png);
+	background-repeat: repeat;
+	position: absolute;
+	padding-top: 1px;
+	left: 84px;
+	width: 510px;
+	right: 3px;
+	top: 28px;
+	font-weight: bolder;
+
+	text-align: center;
+	z-index: 100;
+}
+
+
+/*----------------------------------------
+Elemento rectangular en la parte superior derecha de cualquier cuadro.
+Se usa fundamentalmente para introducir en la cabecerasociedad un rect�ngulo con una 
+llamada a Abandonar Sesi�n
+----------------------------------------*/
+.supright{
+	position: absolute;
+	top: 5px;
+	right: 1%;
+	font-size: small;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+	background-color: White;
+	text-align: center;
+	border: thin groove Blue;
+}
+.correo{
+	margin-left:50%;
+	font-weight: bold; 
+	text-align: right;
+}
+.logadv{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.logadv td{
+	text-align: center
+}
+/*
+.correo1{
+	position: absolute;
+	margin-top:2%;
+	font-weight: bold; 
+	margin-left:50%;
+	text-align: center;
+}
+.madrid{
+	position: absolute;
+	margin-top:2%;
+	margin-left:2%;
+
+}
+*/
+/* cualquier elemento de class="invisible", no se ve */
+.invisible{
+	display: none;
+}
+
+/* cualquier elemento de class="visible", no se altera pero se ve */
+.visible{
+	
+}
+
+/* cualquier elemento de class="centrado" se centra su texto o se centra el objeto*/
+.centrado{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*
+Todos los link, visitados o no, se presentan en azul
+*/
+a:link ,a:visited{
+	color: Blue;
+}
+
+.cabd {
+	position: absolute;
+	right: 1%;
+	font-weight: bold;
+}
+
+/*---------------------
+Formulario dentro de cabus-2
+-----------------------*/
+.cabd1 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.cabd1 input {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Tabla normal alineado elcontenido de las celdas a la izquierda*/
+.tbnor td, .tbnor th {
+	text-align: left;
+}
+/* Texto que se quiera presentar en color */
+.rojo{
+	color: red;
+}
+.azul{
+	color: blue;
+}
+/* Texto que se quiera presentar con fuente grande */
+.grande{
+	text-align: center;
+	font-size: x-large;
+}
+
+/*---------------------------------------
+Cualquier bot�n de llamada que se quiere presentar con aspecto de texto de enlace normal
+---------------------------------------*/
+.botonenlace{
+	border: none;
+	background-color: transparent;
+	color: Blue;
+	text-decoration: underline;
+	text-align: left;
+	cursor: pointer;
+}
+
+.textenlace{
+	color: Blue;
+	text-decoration: underline;
+	text-align: left;
+	cursor: pointer;	
+}
+
+.linea{
+	display: inline;
+}
+
+/*---------------------------------------
+Cualquier enlace de llamada que se quiere presentar con aspecto de bot�n
+---------------------------------------*/
+.boton{
+	color: Black;
+	text-decoration: none;
+	background-color: #E3E3E3;
+	border: thin solid Black;
+}
+
+
+/*----------------------------------------
+Tabla base de selecci�n en cualquier pantalla.
+Class: selec
+----------------------------------------*/
+
+table.selec{
+	width: 98%;
+	/*background-color: #A9DBFB;*/
+	border-collapse: separate;
+	border-spacing: 1px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+table.selec th {
+	background-color: #A9DBFB;
+	text-align: center;
+	border-bottom: thin solid Black;
+}
+
+/* Celdas de cabecera y detalle del campo para selecci�n de fila. Celdas de clase cm */
+table.selec th.cm{
+	width: 1%;
+	border: none;
+	background-color: White;
+	/*border-left: thick double Black;*/
+}
+table.selec td.cm{
+	width: 1%;
+	border: none;
+	background-color: White;
+	/*border-left: thick double Black;*/
+}
+
+/* Celdas de cabecera y detalle de contenidos propios de la tabla. Celdas de clase cm */
+
+table.selec th.cn{
+
+	border-left: thin solid Black;
+	border-right: thin solid Black;
+}
+
+table.selec td.cn {
+
+	text-align: center;
+	border-left: thin solid Black;
+	border-right: thin solid Black;
+	border-top: thin solid Black;	
+	border-bottom: thin solid Black;	
+	font-size: 80%;
+
+	cursor: pointer;
+}
+
+/* Filas impares con fondo gris  */
+table.selec td.impar{
+	background-color: #EDEDED;
+}
+/* Filas pares con fondo blanco  */
+table.selec td.par{
+	background-color: White;
+}
+
+
+/* 
+Fila con el foco para seleccionar. Cada celda se marca con color de fondo
+excepto las celdas class="cm" que tienen el campo de selecci�n de fila que
+se dejan transparentes
+ */
+table.selec tr.cresp1 td{
+	background-color: #5ED85F;
+}
+table.selec tr.cresp1 td.cm{
+	background-color: transparent;
+}
+/*-------------------------------------------------
+Tabla para selecci�n
+--------------------------------------------------*/
+
+table.det {
+	width: 99%;
+	border-collapse: separate;
+	empty-cells: show;
+}
+
+table.det th{
+	width: 35%;
+	text-align: left;
+	background-color: #E4E4E4;
+	border-top: thin solid Black;
+	border-bottom: thin solid Black;
+	border-right: thin solid Black;
+}
+
+table.det td{
+	border: thin solid Black;
+}
+
+table.det #esp{
+	text-align: center;
+	border: medium groove Green;
+	background-color: #5ED85F;	
+}
+table.det #esp1{
+	background-color: #5ED85F;
+	border: medium groove Green;
+}
+
+
+
+/*--------------------------------------
+Gen�ricos tablas
+--------------------------------------*/
+.nv{
+	font-size: 1pt;
+	background-color: transparent;
+	color: White;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+.enla{
+	color: blue;
+	cursor: pointer;
+}
+

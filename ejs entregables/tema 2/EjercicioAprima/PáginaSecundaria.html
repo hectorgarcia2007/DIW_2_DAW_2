@@ -1,0 +1,796 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0123)https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162016.9135&par=04ecd8bc91b3c796e69d792b2241b616 -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <noscript>
+    <meta http-equiv="refresh" content="0; URL=/primavera/loginjavascript.html">
+  </noscript>
+  
+  <!-- Metadatos generales del Proyecto -->
+  <meta name="Author" content="Jorge Fernández Herce">
+  <meta name="Copyright" content="2008/2009 Jorge Fernández Herce">
+  
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  
+  <meta http-equiv="Content-Style-Type" content="text/css"> 
+  
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  
+  <meta name="Description" content="Consulta Enunciados Prueba">
+  <meta name="Keywords" content="Matemáticas, Problemas, Primavera, Prueba">
+  
+  <title>Consulta de Enunciados de Prueba</title>
+  
+  <!-- Icono para navegadores que lo presentan en la barra de direcciones -->
+  <link rel="shortcut icon" href="https://www.a-prima.es/img_gral/logo.ico">
+  
+  <!-- Hoja de estilos genérica del proyecto -->
+  <link href="./login_files/base.css" rel="stylesheet" type="text/css" id="basecss">
+  <link href="./login_files/hcc.css" rel="stylesheet" type="text/css">
+  <link href="./login_files/hcc2.css" rel="stylesheet" type="text/css">
+
+  <!-- Hojas de estilos de la página actual -->
+  <link href="./PáginaSecundaria_files/pagina.css" rel="stylesheet" type="text/css">
+  <link href="./login_files/tablas_resp.css" rel="stylesheet" type="text/css">  
+  <!-- Sentencias JavaScript de scroll para IE y otros-->
+  <script type="text/javascript" src="./PáginaSecundaria_files/js_gral.js.descarga"></script> 
+ 
+  
+  <!-- Sentencias JavaScript de la página actual-->
+  <script type="text/javascript" src="./PáginaSecundaria_files/pagina.js.descarga"></script>  
+
+  </head>
+
+  <body onload="init();">
+<!--
+Introduce:
+- El logo de la Sociedad
+- El texto con el nombre de la Sociedad
+-->
+
+
+<div id="cabecerasociedad"><img id="delta" src="./PáginaSecundaria_files/delta.gif" alt="aprima"><div id="cabus-0"><span class="l1">A prima.</span> <span class="l2">Sociedad Riojana de profesores de Matemáticas</span></div>
+  </div>
+<!--
+Introduce:
+- El nombre del Ususario  validado o el texto de usuario no validado
+-->
+  <div id="cabus-1">
+    Usuario : &nbsp; 
+  &nbsp; Acceso libre. No validado
+  </div>
+  <div class="supright">
+    <a href="https://www.a-prima.es/primavera/login.php">Abandonar sesión</a>  
+  </div>
+
+<div class="bos-10" id="cabus-2">
+  <div class="box-20">
+    <div class="box-30">
+      <div class="box-40">
+      <!-- fin cajas para efecto de borde en relieve -->
+        <div class="box-50">
+          <div id="izqcabfunc">
+        
+             - Consulta Enunciados de Prueba - 
+        
+          </div>
+          <div id="cabfunc">
+            <form name="cab3" action="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162016.9135&amp;par=04ecd8bc91b3c796e69d792b2241b616">
+      
+          </form>
+         </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+<div class="box-1" id="selmenu">
+  <!-- inicio cajas para efecto de borde en relieve -->
+  <div class="box-2">
+    <div class="box-3">
+      <div class="box-4">
+      <!-- fin cajas para efecto de borde en relieve -->
+        <div class="box-5" id="box5">
+        <div class="cab">
+          Pruebas para seleccionar. 
+        </div>
+        <table class="selec">
+        <tbody><tr class="ccab1">
+        <th class="cm"> </th>
+        <th class="cn">Id_Prueba</th>
+  <th class="cn"><form name="forfilt" method="GET" action="https://www.a-prima.es/primavera/seleccion/selec_prrece.php"> Fecha <br> Año:<select name="pa_f1" onchange="forfilt.submit()"><option value="" selected=""> Todos </option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option></select>
+<input type="hidden" name="tiempo" value="1759162038.5946">
+<input type="hidden" name="par" value="33390b66a12976f2d2ee2068c959dd9c">
+</form></th><th class="cn">Descripción<br> Nivel:<select name="pa_f2" onchange="forfilt.submit()"><option value="" selected=""> Todos </option><option value="4">Nivel: 4</option><option value="3">Nivel: 3</option><option value="2">Nivel: 2</option><option value="1">Nivel: 1</option></select>
+
+   <form name="foresp"></form></th></tr><script type="text/javascript">
+var vg_nf=25;
+var vg_ff =0;
+</script>
+<tr class="cresp0" id="f1" onclick="document.getElementById(&#39;cth1&#39;).focus();">
+<td class="cm" id="cm1"><input type="text" class="nv" size="1" name="cth1" id="cth1" onfocus="cambf1(1);" onkeydown="pulsart1(event,1)"> </td>
+<td class="cn impar t20" id="cn1c1">216</td>
+<td class="cn impar t20" id="cn1c2">23-04-2025</td>
+<td class="cn impar" id="cn1c3">Edición XXVII (2025) Fase 2 Nivel 4</td>
+</tr>
+<tr class="cresp0" id="f2" onclick="document.getElementById(&#39;cth2&#39;).focus();">
+<td class="cm" id="cm2"><input type="text" class="nv" size="1" name="cth2" id="cth2" onfocus="cambf1(2);" onkeydown="pulsart1(event,2)"> </td>
+<td class="cn par t20" id="cn2c1">215</td>
+<td class="cn par t20" id="cn2c2">23-04-2025</td>
+<td class="cn par" id="cn2c3">Edición XXVII (2025) Fase 2 Nivel 3</td>
+</tr>
+<tr class="cresp0" id="f3" onclick="document.getElementById(&#39;cth3&#39;).focus();">
+<td class="cm" id="cm3"><input type="text" class="nv" size="1" name="cth3" id="cth3" onfocus="cambf1(3);" onkeydown="pulsart1(event,3)"> </td>
+<td class="cn impar t20" id="cn3c1">214</td>
+<td class="cn impar t20" id="cn3c2">23-04-2025</td>
+<td class="cn impar" id="cn3c3">Edición XXVII (2025) Fase 2 Nivel 2</td>
+</tr>
+<tr class="cresp0" id="f4" onclick="document.getElementById(&#39;cth4&#39;).focus();">
+<td class="cm" id="cm4"><input type="text" class="nv" size="1" name="cth4" id="cth4" onfocus="cambf1(4);" onkeydown="pulsart1(event,4)"> </td>
+<td class="cn par t20" id="cn4c1">213</td>
+<td class="cn par t20" id="cn4c2">23-04-2025</td>
+<td class="cn par" id="cn4c3">Edición XXVII (2025) Fase 2 Nivel 1</td>
+</tr>
+<tr class="cresp0" id="f5" onclick="document.getElementById(&#39;cth5&#39;).focus();">
+<td class="cm" id="cm5"><input type="text" class="nv" size="1" name="cth5" id="cth5" onfocus="cambf1(5);" onkeydown="pulsart1(event,5)"> </td>
+<td class="cn impar t20" id="cn5c1">212</td>
+<td class="cn impar t20" id="cn5c2">23-02-2025</td>
+<td class="cn impar" id="cn5c3">Edición XXVII (2025) Fase 1 Nivel 4</td>
+</tr>
+<tr class="cresp0" id="f6" onclick="document.getElementById(&#39;cth6&#39;).focus();">
+<td class="cm" id="cm6"><input type="text" class="nv" size="1" name="cth6" id="cth6" onfocus="cambf1(6);" onkeydown="pulsart1(event,6)"> </td>
+<td class="cn par t20" id="cn6c1">211</td>
+<td class="cn par t20" id="cn6c2">23-02-2025</td>
+<td class="cn par" id="cn6c3">Edición XXVII (2025) Fase 1 Nivel 3</td>
+</tr>
+<tr class="cresp0" id="f7" onclick="document.getElementById(&#39;cth7&#39;).focus();">
+<td class="cm" id="cm7"><input type="text" class="nv" size="1" name="cth7" id="cth7" onfocus="cambf1(7);" onkeydown="pulsart1(event,7)"> </td>
+<td class="cn impar t20" id="cn7c1">210</td>
+<td class="cn impar t20" id="cn7c2">23-02-2025</td>
+<td class="cn impar" id="cn7c3">Edición XXVII (2025) Fase 1 Nivel 2</td>
+</tr>
+<tr class="cresp0" id="f8" onclick="document.getElementById(&#39;cth8&#39;).focus();">
+<td class="cm" id="cm8"><input type="text" class="nv" size="1" name="cth8" id="cth8" onfocus="cambf1(8);" onkeydown="pulsart1(event,8)"> </td>
+<td class="cn par t20" id="cn8c1">209</td>
+<td class="cn par t20" id="cn8c2">23-02-2025</td>
+<td class="cn par" id="cn8c3">Edición XXVII (2025) Fase 1 Nivel 1</td>
+</tr>
+<tr class="cresp0" id="f9" onclick="document.getElementById(&#39;cth9&#39;).focus();">
+<td class="cm" id="cm9"><input type="text" class="nv" size="1" name="cth9" id="cth9" onfocus="cambf1(9);" onkeydown="pulsart1(event,9)"> </td>
+<td class="cn impar t20" id="cn9c1">208</td>
+<td class="cn impar t20" id="cn9c2">23-04-2024</td>
+<td class="cn impar" id="cn9c3">Edición XXVI (2024) Fase 2 Nivel 4</td>
+</tr>
+<tr class="cresp0" id="f10" onclick="document.getElementById(&#39;cth10&#39;).focus();">
+<td class="cm" id="cm10"><input type="text" class="nv" size="1" name="cth10" id="cth10" onfocus="cambf1(10);" onkeydown="pulsart1(event,10)"> </td>
+<td class="cn par t20" id="cn10c1">207</td>
+<td class="cn par t20" id="cn10c2">23-04-2024</td>
+<td class="cn par" id="cn10c3">Edición XXVI (2024) Fase 2 Nivel 3</td>
+</tr>
+<tr class="cresp0" id="f11" onclick="document.getElementById(&#39;cth11&#39;).focus();">
+<td class="cm" id="cm11"><input type="text" class="nv" size="1" name="cth11" id="cth11" onfocus="cambf1(11);" onkeydown="pulsart1(event,11)"> </td>
+<td class="cn impar t20" id="cn11c1">206</td>
+<td class="cn impar t20" id="cn11c2">23-04-2024</td>
+<td class="cn impar" id="cn11c3">Edición XXVI (2024) Fase 2 Nivel 2</td>
+</tr>
+<tr class="cresp0" id="f12" onclick="document.getElementById(&#39;cth12&#39;).focus();">
+<td class="cm" id="cm12"><input type="text" class="nv" size="1" name="cth12" id="cth12" onfocus="cambf1(12);" onkeydown="pulsart1(event,12)"> </td>
+<td class="cn par t20" id="cn12c1">205</td>
+<td class="cn par t20" id="cn12c2">23-04-2024</td>
+<td class="cn par" id="cn12c3">Edición XXVI (2024) Fase 2 Nivel 1</td>
+</tr>
+<tr class="cresp0" id="f13" onclick="document.getElementById(&#39;cth13&#39;).focus();">
+<td class="cm" id="cm13"><input type="text" class="nv" size="1" name="cth13" id="cth13" onfocus="cambf1(13);" onkeydown="pulsart1(event,13)"> </td>
+<td class="cn impar t20" id="cn13c1">204</td>
+<td class="cn impar t20" id="cn13c2">23-04-2024</td>
+<td class="cn impar" id="cn13c3">Edición XXVI (2024) Fase 1 Nivel 4</td>
+</tr>
+<tr class="cresp1" id="f14" onclick="document.getElementById(&#39;cth14&#39;).focus();">
+<td class="cm" id="cm14"><input type="text" class="nv" size="1" name="cth14" id="cth14" onfocus="cambf1(14);" onkeydown="pulsart1(event,14)"> </td>
+<td class="cn par t20" id="cn14c1">203</td>
+<td class="cn par t20" id="cn14c2">23-04-2024</td>
+<td class="cn par" id="cn14c3">Edición XXVI (2024) Fase 1 Nivel 3</td>
+</tr>
+<tr class="cresp0" id="f15" onclick="document.getElementById(&#39;cth15&#39;).focus();">
+<td class="cm" id="cm15"><input type="text" class="nv" size="1" name="cth15" id="cth15" onfocus="cambf1(15);" onkeydown="pulsart1(event,15)"> </td>
+<td class="cn impar t20" id="cn15c1">202</td>
+<td class="cn impar t20" id="cn15c2">23-04-2024</td>
+<td class="cn impar" id="cn15c3">Edición XXVI (2024) Fase 1 Nivel 2</td>
+</tr>
+<tr class="cresp0" id="f16" onclick="document.getElementById(&#39;cth16&#39;).focus();">
+<td class="cm" id="cm16"><input type="text" class="nv" size="1" name="cth16" id="cth16" onfocus="cambf1(16);" onkeydown="pulsart1(event,16)"> </td>
+<td class="cn par t20" id="cn16c1">201</td>
+<td class="cn par t20" id="cn16c2">23-04-2024</td>
+<td class="cn par" id="cn16c3">Edición XXVI (2024) Fase 1 Nivel 1</td>
+</tr>
+<tr class="cresp0" id="f17" onclick="document.getElementById(&#39;cth17&#39;).focus();">
+<td class="cm" id="cm17"><input type="text" class="nv" size="1" name="cth17" id="cth17" onfocus="cambf1(17);" onkeydown="pulsart1(event,17)"> </td>
+<td class="cn impar t20" id="cn17c1">200</td>
+<td class="cn impar t20" id="cn17c2">23-04-2023</td>
+<td class="cn impar" id="cn17c3">Edición XXV (2023) Fase 2 Nivel 4</td>
+</tr>
+<tr class="cresp0" id="f18" onclick="document.getElementById(&#39;cth18&#39;).focus();">
+<td class="cm" id="cm18"><input type="text" class="nv" size="1" name="cth18" id="cth18" onfocus="cambf1(18);" onkeydown="pulsart1(event,18)"> </td>
+<td class="cn par t20" id="cn18c1">199</td>
+<td class="cn par t20" id="cn18c2">23-04-2023</td>
+<td class="cn par" id="cn18c3">Edición XXV (2023) Fase 2 Nivel 3</td>
+</tr>
+<tr class="cresp0" id="f19" onclick="document.getElementById(&#39;cth19&#39;).focus();">
+<td class="cm" id="cm19"><input type="text" class="nv" size="1" name="cth19" id="cth19" onfocus="cambf1(19);" onkeydown="pulsart1(event,19)"> </td>
+<td class="cn impar t20" id="cn19c1">198</td>
+<td class="cn impar t20" id="cn19c2">23-04-2023</td>
+<td class="cn impar" id="cn19c3">Edición XXV (2023) Fase 2 Nivel 2</td>
+</tr>
+<tr class="cresp0" id="f20" onclick="document.getElementById(&#39;cth20&#39;).focus();">
+<td class="cm" id="cm20"><input type="text" class="nv" size="1" name="cth20" id="cth20" onfocus="cambf1(20);" onkeydown="pulsart1(event,20)"> </td>
+<td class="cn par t20" id="cn20c1">197</td>
+<td class="cn par t20" id="cn20c2">23-04-2023</td>
+<td class="cn par" id="cn20c3">Edición XXV (2023) Fase 2 Nivel 1</td>
+</tr>
+<tr class="cresp0" id="f21" onclick="document.getElementById(&#39;cth21&#39;).focus();">
+<td class="cm" id="cm21"><input type="text" class="nv" size="1" name="cth21" id="cth21" onfocus="cambf1(21);" onkeydown="pulsart1(event,21)"> </td>
+<td class="cn impar t20" id="cn21c1">196</td>
+<td class="cn impar t20" id="cn21c2">23-04-2023</td>
+<td class="cn impar" id="cn21c3">Edición XXV (2023) Fase 1 Nivel 4</td>
+</tr>
+<tr class="cresp0" id="f22" onclick="document.getElementById(&#39;cth22&#39;).focus();">
+<td class="cm" id="cm22"><input type="text" class="nv" size="1" name="cth22" id="cth22" onfocus="cambf1(22);" onkeydown="pulsart1(event,22)"> </td>
+<td class="cn par t20" id="cn22c1">195</td>
+<td class="cn par t20" id="cn22c2">23-04-2023</td>
+<td class="cn par" id="cn22c3">Edición XXV (2023) Fase 1 Nivel 3</td>
+</tr>
+<tr class="cresp0" id="f23" onclick="document.getElementById(&#39;cth23&#39;).focus();">
+<td class="cm" id="cm23"><input type="text" class="nv" size="1" name="cth23" id="cth23" onfocus="cambf1(23);" onkeydown="pulsart1(event,23)"> </td>
+<td class="cn impar t20" id="cn23c1">194</td>
+<td class="cn impar t20" id="cn23c2">23-04-2023</td>
+<td class="cn impar" id="cn23c3">Edición XXV (2023) Fase 1 Nivel 2</td>
+</tr>
+<tr class="cresp0" id="f24" onclick="document.getElementById(&#39;cth24&#39;).focus();">
+<td class="cm" id="cm24"><input type="text" class="nv" size="1" name="cth24" id="cth24" onfocus="cambf1(24);" onkeydown="pulsart1(event,24)"> </td>
+<td class="cn par t20" id="cn24c1">193</td>
+<td class="cn par t20" id="cn24c2">23-04-2023</td>
+<td class="cn par" id="cn24c3">Edición XXV (2023) Fase 1 Nivel 1</td>
+</tr>
+<tr class="cresp0" id="f25" onclick="document.getElementById(&#39;cth25&#39;).focus();">
+<td class="cm" id="cm25"><input type="text" class="nv" size="1" name="cth25" id="cth25" onfocus="cambf1(25);" onkeydown="pulsart1(event,25)"> </td>
+<td class="cn impar t20" id="cn25c1">192</td>
+<td class="cn impar t20" id="cn25c2">23-04-2022</td>
+<td class="cn impar" id="cn25c3">Edición XXIV (2022) Fase 2 Nivel 4</td>
+</tr>
+          </tbody></table>
+            
+  <div class="centrado">
+ del 1 al 25 de 216 <a href="https://www.a-prima.es/primavera/seleccion/selec_prrece.php?tiempo=1759162038.5946&amp;par=11ff5f8f05077635b091a455b0b18c7c"> - Adelante</a>
+<hr>
+<a href="https://www.a-prima.es/primavera/entrada/entrada.php?tiempo=1759162038.5946&amp;par=905148f5177a675cbda624e11e9fc5c8">Abandonar</a>
+</div>
+ 
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div class="bos-10" id="cabus-2">
+  <div class="box-20">
+    <div class="box-30">
+      <div class="box-40">
+      <!-- fin cajas para efecto de borde en relieve -->
+        <div class="box-50">
+          <div id="izqcabfunc">
+        
+             - Consulta Enunciados de Prueba - 
+        
+          </div>
+          <div id="cabfunc">
+            <form name="cab3" action="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162016.9135&amp;par=04ecd8bc91b3c796e69d792b2241b616">
+      
+          </form>
+         </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="box-1" id="selcontenidos">
+  <!-- inicio cajas para efecto de borde en relieve -->
+  <div class="box-2">
+    <div class="box-3">
+      <div class="box-4">
+      <!-- fin cajas para efecto de borde en relieve -->
+        <div class="box-5" id="box5">
+
+          <div id="vis0" class="visible cab">  
+            Elige la prueba en la tabla de la izquierda
+                      </div>
+<div id="vis1" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 2 Nivel 4</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Provisional</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=f7e19ab7a5ac897bf80e7e68163bc685" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>4</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis2" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 2 Nivel 3</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Provisional</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=222b17f8621d6b25bebdd6750e473d24" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>3</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis3" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 2 Nivel 2</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Provisional</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=1f0c58394ae1f1973d7b0f11a8b711e9" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>2</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis4" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 2 Nivel 1</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Provisional</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=97a2606ff3654ca2558534860ebe77c1" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>1</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis5" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 02 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 1 Nivel 4</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Definitivo</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=36f2bfe172ef942dddd41ffe00e16e66" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>4</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis6" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 02 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 1 Nivel 3</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Definitivo</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=25eea14a96d7af3d8fcc51e227282992" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>3</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis7" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 02 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 1 Nivel 2</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Definitivo</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=7f18b516f53705950ead67c92e65f176" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>2</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis8" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 02 - 2025</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVII (2025) Fase 1 Nivel 1</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Resultado Definitivo</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=e87df4bb6e211792a42f72216148e6bb" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2025</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>1</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis9" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 2 Nivel 4</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=d59170c5bc9b6cf435c4ceb3677dcd30" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>4</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis10" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 2 Nivel 3</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=6b5bc0f65a9a3a2e118b9d11e1108d44" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>3</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis11" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 2 Nivel 2</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=7be854a8a89922ed068c113f893dd81f" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>2</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis12" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 2 Nivel 1</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=c088534754ae2d22c36de6151c0cca5a" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>1</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis13" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 1 Nivel 4</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=70695c8efd48c73c17f350dcd6e59351" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>4</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis14" class="visible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 1 Nivel 3</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=4554341c7db1218b5deee1fc2f27035b" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>3</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis15" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 1 Nivel 2</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=d85b5dba9aae2c7ab8ab1c97a04c901e" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>2</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis16" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2024</td></tr>
+<tr><th>Descripción:</th><td>Edición XXVI (2024) Fase 1 Nivel 1</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=e7e2531ef2f4de61b8ba86f463be9c6b" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2024</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>1</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis17" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 2 Nivel 4</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=32eac021d4c08643251427361ce02dba" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>4</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis18" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 2 Nivel 3</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=0e0b42cb8612623da102d33a12904afa" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>3</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis19" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 2 Nivel 2</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=2fed75bae49a081256ea54ae0183124d" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>2</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis20" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 2 Nivel 1</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=7f45b3ae17947ddfbe9a00c58f488fd3" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>1</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>4</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis21" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 1 Nivel 4</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=d9afd399d2149afc4d4a5ef4f80a2d51" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>4</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>2</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis22" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 1 Nivel 3</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=1b65f8e279d40e41c32911705089f6f4" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>3</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>2</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis23" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 1 Nivel 2</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=e4474074d9bcd46967a90dde4e91c96e" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>2</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>2</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis24" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2023</td></tr>
+<tr><th>Descripción:</th><td>Edición XXV (2023) Fase 1 Nivel 1</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=6b1479d4808339076fc0ae38001f9cc1" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2023</td></tr>
+<tr><th>Fase:</th><td>1</td></tr>
+<tr><th>Nivel:</th><td>1</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>2</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+<div id="vis25" class="invisible">
+<table class="det">
+<tbody><tr><th>Fecha:</th><td> 23 - 04 - 2022</td></tr>
+<tr><th>Descripción:</th><td>Edición XXIV (2022) Fase 2 Nivel 4</td></tr>
+<tr><th>Estado:</th><td><span class="rojo">Cerrada</span></td></tr>
+<tr><td colspan="2" id="esp">
+<a href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162038.5946&amp;par=a681d80ea670cb25583025f05c18f7fe" class="boton">Seleccionar</a></td></tr>
+<tr><th>Año:</th><td>2022</td></tr>
+<tr><th>Fase:</th><td>2</td></tr>
+<tr><th>Nivel:</th><td>4</td></tr>
+<tr><th>Región:</th><td>26</td></tr>
+<tr><th>Cantidad de Preguntas:</th><td>25</td></tr>
+<tr><th>Puntos por cada pregunta bien:</th><td>4</td></tr>
+<tr><th>Puntos por cada pregunta mal:</th><td>0</td></tr>
+<tr><th>Puntos por cada pregunta N/C:</th><td>1</td></tr>
+<tr><th>Número máximo de participantes por Centro:</th><td>2</td></tr>
+<tr><th>Más descripción:</th><td></td></tr>
+</tbody></table>
+</div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>
+ 
+
+
+
+</body></html>

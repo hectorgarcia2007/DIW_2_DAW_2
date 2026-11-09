@@ -1,0 +1,62 @@
+@media screen,projection {
+
+h1 {
+  margin : 0
+}
+* > #selmenu {
+  	bottom: 3px;
+}
+* > #selcontenidos {
+	left: 51%;
+	width: 48%;	
+  	bottom: 3px;
+}
+* > #aviso {
+	width: 98%;
+	bottom: 3px;	
+}
+
+* > #cabus-2 {
+  position : absolute;
+  top: 50px;
+  right: 1%;	
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+* > #cuerpoc {
+  position : absolute;
+  left     : 5%;
+  width    : 90%;
+  top      : 100px;
+  bottom   : 10px;
+
+}
+* > .box-1 {
+  position: absolute;
+  padding  : 0;
+  margin   : 0;
+}
+* > .box-2 {
+  position : absolute;
+	bottom: 0px;
+	right: 0px;
+}
+* > .box-3 {
+  position : absolute;
+  bottom   : 0px;
+  right    : 0px;
+}
+* > .box-4 {
+  position : absolute;
+  bottom   : 2px;
+  right    : 2px;
+}
+* > .box-5 {
+  position : absolute;
+  bottom   : 0px;
+  right    : 0px;
+
+  overflow: auto;
+}
+}

@@ -1,0 +1,140 @@
+#titsup{
+	position: absolute;
+	top: 88px;
+	left: 1%;
+	width: 99%;
+	height: 80px;
+}
+
+#detalle{
+	position: absolute;
+	top: 170px;
+	left: 1%;
+	width: 99%;
+}
+* > #titsup{
+	width: 98%;
+	right: 1%;
+}
+
+* > #detalle{
+	width: 98%;
+	bottom: 3px;	
+}
+#box5{
+	padding: 0px;
+}
+
+/*
+Texto fijo de cabecera interna en los cuadros de pantalla menu y contenidos
+*/
+
+.cab{
+	text-align: center;
+	background-color: #5ED85F;
+	font-weight: bold;
+	padding-bottom: 3px;
+	margin-bottom: 3px;
+	border-bottom: medium groove Gray;
+}
+/*--*/
+
+.tablapreg{
+	width: 98%;
+
+}
+
+.tablapreg td{
+	padding-bottom: 3px;
+	padding-top: 3px;
+}
+.tablapreg td.numpreg{
+	text-align: center;
+	border-right:medium double Black;
+	border-bottom: medium double Black;
+	width: 5%;
+
+}
+.tablapreg td.enum{
+	border-bottom: thin dotted Black;
+	width: auto;
+}
+.tablapreg td.enums{
+	border-bottom: medium double Black;
+	width: auto;
+}
+.tablapreg td.estad{
+	border-bottom: medium double Black;
+	text-align: center;
+}
+
+.PrimaveraEnunciado{
+	
+}
+.PrimaveraRespuestas{
+	
+}
+.italic {
+	font-style: italic;
+}
+.bold {
+	font-weight: bold;
+}
+.enlinea{
+	vertical-align: middle;
+}
+.tablapreg .respuestas{
+ 
+	border-collapse: collapse;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 5px;
+}
+.tablapreg .respuestas td{
+	text-align: center;
+	border: thin groove Black;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.tablapreg .respuestas th {
+	text-align: center;
+	font-weight: bold;
+	border: thin groove Black;
+}
+
+table.estadist{
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse; 
+}
+table.estadist th{
+	text-align: center;
+	background-color: #C0F1F2;
+	border: thin solid Black;
+	vertical-align: bottom;
+}
+
+table.estadist td{
+	text-align: center;
+	border: thin solid Black;
+}
+.cabsel{
+	margin-left: auto;
+	margin-right: auto;
+
+}
+.cabsel .p1{
+	width: 25%;
+	text-align: center;
+}
+.cabsel .p2{
+	width: 50%;
+	text-align: center;
+}
+.cabsel .p3{
+	width: 75%;
+	text-align: center;
+}
+.cabsel td{
+	text-align: center;
+}

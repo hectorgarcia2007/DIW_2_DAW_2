@@ -1,0 +1,225 @@
+/*
+Clases para cajas contenedoreas de cuadros b�sicos de pantallas
+
+
+box-1: Clase para caja contenedora principal:
+ En cada proceso incorporar� un id determinado y se ubicar� de manera espec�fica refiri�ndonos a su id
+ en la hoja de estilo propia del proceso
+*/
+.box-1 {
+  margin   : 0;
+  border: none;
+  padding  : 0;
+
+}
+
+/* Clases para cajas de efecto de borde en relieve: l�nea interior-relleno-l�nea exterior
+	Se recolocar�n de manera absoluta en funci�n de box-1 en cada proceso
+*/
+.box-2 {
+
+	border: #000 1px solid;
+
+	padding: 0px;
+	margin: 0px;
+	top: 0px;
+	left: 0px;
+	color: #000;
+	background-color: #ccc;
+}
+.box-3 {
+
+  top      : 0px;
+  left     : 0px;
+  
+  margin   : 0px;
+  border-left: #fff 1px solid;
+  border-top: #fff 1px solid;
+  border-right: #999 1px solid;
+  border-bottom: #999 1px solid;
+  padding  : 2px; 
+
+  color: #000;
+  background-color: #ccc;
+}
+.box-4 {
+
+  top      : 2px;
+  left     : 2px;
+  
+  margin   : 0px;
+  border-left: #999 1px solid;
+  border-top: #999 1px solid;
+  border-right: #fff 1px solid;
+  border-bottom: #fff 1px solid;
+  padding  : 0px;
+
+  color: #fff;
+  background-color: black;
+}
+/* Clase para caja del contenido propio*/
+.box-5 {
+
+  top      : 0px;
+  left     : 0px;
+
+  margin   : 0px;
+  border-left: #000 1px solid;
+  border-top: #000 1px solid;
+  border-right: #000 1px solid;
+  border-bottom: #000 1px solid;
+  padding  : 4px;
+
+  color: Black;
+  background-color: #fff;
+}
+
+
+
+
+/*
+Clases para cajas contenedoras de cabeceras
+*/
+
+/* Clase para caja contenedora principal:
+ En casi todos los procesos ir� ubicada de manera id�ntica. Su id = "cabus-2"
+ Si en un proceso determinado se debe recolocar sobre la posici�n general incorporar� un id determinado y se ubicar�
+ de manera espec�fica refiri�ndonos a su id en la hoja de estilo propia del proceso
+*/
+.box-10 {
+	margin: 0px;
+	border: none ;
+	padding: 0px;
+}
+
+#cabus-2 {
+  position : absolute;
+  left: 84px;
+  top: 50px;	
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+
+}
+
+/* Clases para cajas de efecto de borde en relieve: l�nea interior-relleno-l�nea exterior */
+.box-20 {
+	margin: 0px 0px 1em;
+	border: #000 1px solid;
+	padding: 0px;
+
+	background-color: #ccc;
+	color: #000;
+
+}
+.box-30 {
+	margin: 0px;
+	border-left: #fff 1px solid;
+	border-top: #fff 1px solid;
+	border-right: #999 1px solid;
+	border-bottom: #999 1px solid;
+	padding: 2px;
+
+	background-color: #CCC;
+	color: #000;
+
+}
+.box-40 {
+	margin: 0px;
+	border-left: #fff 1px solid;
+	border-top: #fff 1px solid;
+	border-right: #999 1px solid;
+	border-bottom: #999 1px solid;
+	padding: 0px;
+
+	background-color: Black;
+	color: #fff;
+}
+
+/* Clase para caja del contenido propio */
+.box-50 {
+	margin: 0px;
+	border-left: #000 1px solid;
+	border-top: #000 1px solid;
+	border-right: #000 1px solid;
+	border-bottom: #000 1px solid;
+	padding-left: 4px;
+	padding-top: 1px;
+	padding-right: 4px;
+	padding-bottom: 1px;
+
+	background-color: #5ED85F;
+	color: Black;
+
+	height: 23px;
+	font-weight: bold;
+}
+
+
+/*
+Cuadros b�sicos para dise�o de pantallas:
+
+a) menu y contenidos para pantallas partidas en lado izquierdo y derecho. Las propiedades 	left: y 	width: ;	se redimensionan en cada p�gina que los use
+b) tipsup y detalle para pantallas con parte superior e inferior. Las propiedades top: y height: (tipsup) y top: y borrom: (detalle)se redimensionan en cada p�gina que los use
+c) unicodetalle para pantallas con un solo cuadro de contenido. Las propiedades top: y height: se redimensionan en cada p�gina que lo use
+
+*/
+#cuerpoc {
+  position : absolute;
+  top      : 100px;
+  left     : 5%;
+  width    : 90%;
+
+}
+#aviso{
+	position: absolute;
+	top: 88px;
+	left: 1%;
+	width: 99%;
+}
+
+#cabfunc{
+  	position : absolute;
+	right: 1px;
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+	min-width: 35%;
+}
+#izqcabfunc{
+	position: absolute;
+	left: 1px;
+	min-width: 35%;
+	text-align: center;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#selmenu {
+	position: absolute;
+	top: 90px;
+	left: 1%;
+	width: 50%;
+}
+#selcontenidos {
+	position: absolute;
+	top: 90px;
+	left: 52%;
+	width: 47%;	
+}
+
+/*----------------------------------------------------------
+Los siguientes elementos se definen espec�ficamente para cada p�gina 
+---------------------------------------------------------
+#menu {
+	left: ;
+	width: ;	
+
+}
+#contenidos {
+	left: ;
+	width: ;	
+}
+
+*/
+

@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0042)https://www.a-prima.es/primavera/login.php -->
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <noscript>
+      <meta
+        http-equiv="refresh"
+        content="0; URL=/primavera/loginjavascript.html"
+      />
+    </noscript>
+
+    <!-- Metadatos generales del Proyecto -->
+    <meta name="Author" content="Jorge Fernández Herce" />
+    <meta name="Copyright" content="2008/2009 Jorge Fernández Herce" />
+
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+    <meta name="generator" content="PSPad editor, www.pspad.com" />
+
+    <meta name="Description" content="Pantalla de Login" />
+    <meta name="Keywords" content="Matemáticas, Problemas, Primavera, Prueba" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Acceso validado</title>
+
+    <!-- Icono para navegadores que lo presentan en la barra de direcciones -->
+    <link
+      rel="shortcut icon"
+      href="https://www.a-prima.es/primavera/imagenes/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Hoja de estilos genérica del proyecto
+  <link href="./login_files/base.css" rel="stylesheet" type="text/css" id="basecss">
+  <link href="./login_files/hcc.css" rel="stylesheet" type="text/css">
+  <link href="./login_files/hcc2.css" rel="stylesheet" type="text/css">
+
+  Hojas de estilos de la página actual 
+  <link href="./login_files/login.css" rel="stylesheet" type="text/css">
+  -->
+    <link rel="stylesheet" href="login_files/loginMiEstilo.css" />
+
+    <!-- Sentencias JavaScript de scroll para IE y otros-->
+    <script
+      type="text/javascript"
+      src="./login_files/js_gral.js.descarga"
+    ></script>
+
+    <!-- Sentencias JavaScript de la página actual-->
+    <script
+      type="text/javascript"
+      src="./login_files/pagina.js.descarga"
+    ></script>
+  </head>
+
+  <body>
+    <div id="cabecerasociedad">
+      <div id="logo">
+        <img src="./login_files/aprima.gif" alt="aprima"/>
+      </div>
+    </div>
+
+    <div class="box-1" id="cuerpoc">
+      <!-- inicio cajas para efecto de borde en relieve -->
+      <div class="box-2">
+        <div class="box-3">
+          <div class="box-4">
+            <!-- fin cajas para efecto de borde en relieve -->
+            <div class="box-5" id="box5">
+              <div class="cab">Acceso:</div>
+
+              <form
+                action="https://www.a-prima.es/primavera/entrada/acceso.php"
+                method="post"
+              >
+                <input type="hidden" name="seguir" value="login" />
+                <ul>
+                  <li>
+                    <span id="informacionAcceso"
+                      >Con usuario y contraseña:</span
+                    >
+                    <br />
+                    <div id="loginIntroduccion">
+                      <label for="loginTexto">Usuario (Login):<br /></label>
+                      <input
+                        type="text"
+                        name="login"
+                        size="20"
+                        id="loginTexto"
+                        class="login"
+                      /><br />
+
+                      <label for="loginContra"
+                        >Contraseña (Password):<br
+                      /></label>
+
+                      <input
+                        type="password"
+                        name="passw"
+                        size="20"
+                        id="loginContra"
+                        class="login"
+                      />
+
+                      <br /><br />Con ello podrá realizar consultas o
+                      mantenimiento específicos según sus permisos en la
+                      aplicación.
+                    </div>
+                  </li>
+
+                  <div id="botonAcceder">
+                    <span class="centrado">
+                      <input type="submit" name="enviar" value="Acceder" />
+                    </span>
+                  </div>
+                </ul>
+
+                <hr />
+              </form>
+              <!-- Presentación del contador de visitas 
+        <div class=cont>
+          Eres el visitante número:
+          <table  > 
+          <tr> 
+          
+                    </tr>
+          </table>
+        </div>
+        -->
+
+              <table class="logadv">
+                <tbody>
+                  <tr>
+                    <td>
+                      <div id="textoConcurso">
+                        <img
+                          src="./login_files/cmadrid.gif"
+                          alt="Comite organizador de Madrid"
+                          width="100"
+                          height="100"
+                          class="madrid"
+                        />
+                        El Concurso de Primavera se realiza en La Rioja con la
+                        inestimable colaboración del:
+                        <br />
+                        Comité Organizador del Concurso de Primavera de
+                        Madrid<br />
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="correo1">
+                        <div align="center">
+                          <span class="rojo centrado"
+                            >Para cualquier notificación, sugerencia o
+                            información, dirigirse por email a :</span
+                          >
+                          <br />
+                          <br />
+                          <img src="./login_files/correoaprimarojo.gif" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="piesociedad"></div>
+  </body>
+</html>

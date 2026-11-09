@@ -1,0 +1,200 @@
+// JavaScript Document
+
+contadores = new Array (25);
+for (i=0; i<25; i++){
+  contadores[i]=2;
+}
+
+function corrige(fmu) {
+ var v_i; // acogerá el número de la pregunta
+ var v_j; // acogerá el nombre del icono de respuesta nc, b, m
+ //var c_j; // posición relativa de la pregunta en la página actual
+ var v_ruta;  // acogerá la ruta de las imágenes que hay que modificar
+ var v_solucion; // acoge la lista de soluciones
+ var v_sol;  //acoge la solución para la pregunta solicitada
+ 
+ /* Los nombres de los formularios que definen cada pregunta son fop siendo n el número de la pregunta. En v_i metemos el número de la pregunta */
+ v_i= (fmu.name).substring(3,(fmu.name).length);
+
+ v_j="ilp"+v_i;
+ 
+ 
+ //c_j = v_j.substring(3,v_j.length)-1;
+ 
+ // llama a la funcion para determinar la ruta de los archivos de imagen
+ v_ruta = determina_ruta(document.images[v_j].src);
+ 
+
+
+  // Accedo a por la lista de soluciones
+   //var v_solucion = bases();
+   
+   
+   if (v_solucion==""){
+    alert("Se ha producido un error. No se puede corregir la prueba")
+   }else{
+      v_sol = v_solucion.charAt(c_j);
+      v_cf=5;
+      v_ac=0;
+      if (fmu.elements[0].checked){
+        v_cf--;
+        if (v_sol=="A"){
+          v_ac=1;    
+        }
+      }  
+      if (fmu.elements[1].checked){
+        v_cf--;
+        if (v_sol=="B"){     
+          v_ac=1;
+        }
+      }
+      if (fmu.elements[2].checked){
+        v_cf--;
+        if (v_sol=="C"){     
+          v_ac=1;
+        }
+      }  
+      if (fmu.elements[3].checked){
+        v_cf--;
+        if (v_sol=="D"){     
+          v_ac=1;
+        }
+      }
+      if (fmu.elements[4].checked){
+        v_cf--;
+        if (v_sol=="E"){     
+          v_ac=1;
+        }
+      }
+      // Si la respuesta es correcta
+      if (v_ac==1){
+        document.forms.resultados.crb.value= parseInt(document.forms.resultados.crb.value)+ 1;      
+
+        switch (contadores[c_j]){
+          // Si la pregunta estaba contestada mal  
+          case 0:{
+            document.forms.resultados.crm.value= parseInt(document.forms.resultados.crm.value)- 1; 
+            document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) + 5;
+            break;                       
+          }
+          // Si la pregunta no estaba contestada
+          case 2:{
+            document.forms.resultados.crc.value = parseInt(document.forms.resultados.crc.value)+ 1;
+            document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) + 3;
+
+            break;          
+          }
+        }
+        contadores[c_j]=5;
+        document.images[v_j].src= v_ruta + "acierto.gif";
+      
+      //Si la respueta es incorrecta
+      }else if(v_cf !=5){
+          document.forms.resultados.crm.value= parseInt(document.forms.resultados.crm.value)+ 1;      
+      
+        switch (contadores[c_j]){
+          // Si la pregunta estaba contestada bien  
+          case 0:{
+            document.forms.resultados.crb.value= parseInt(document.forms.resultados.crb.value)-1;
+            document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) -5;
+            break;                       
+          }
+          // Si la pregunta no estaba contestada
+          case 2:{
+            document.forms.resultados.crc.value= parseInt(document.forms.resultados.crc.value)+ 1;
+
+            document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) - 2;
+            break;          
+          }
+        }
+        contadores[c_j]=0;      
+        document.images[v_j].src=v_ruta + "fallo.gif";
+      
+      }else{
+        document.images[v_j].src=v_ruta + "ncon.gif";
+
+      }
+
+    }
+}
+
+function borra(fmu){
+ 
+  v_i= (fmu.name).substring(2,(fmu.name).length);
+  v_j="rp"+v_i;
+  c_j = v_j.substring(2,v_j.length)-1;  
+  v_ruta = determina_ruta(document.images[v_j].src);
+ 
+  fmu.p[0].checked= false;
+  fmu.p[1].checked= false;
+  fmu.p[2].checked=false;
+  fmu.p[3].checked=false; 
+  fmu.p[4].checked=false;
+  
+  switch (contadores[c_j]){
+    // Si la pregunta estaba contestada mal  
+    case 0:{
+  document.forms.resultados.crc.value= parseInt(document.forms.resultados.crc.value)- 1;  
+      document.forms.resultados.crm.value= parseInt(document.forms.resultados.crm.value)- 1; 
+      document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) + 2;
+      break;                       
+    }
+    // Si la pregunta estaba contestada bien
+    case 5:{
+      document.forms.resultados.crc.value= parseInt(document.forms.resultados.crc.value)- 1;
+      document.forms.resultados.crb.value = parseInt(document.forms.resultados.crb.value)- 1;
+      document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) - 3;
+      break;          
+    }
+  }
+  contadores[c_j]=2;
+  document.images[v_j].src=v_ruta + "ncon.gif";
+
+}
+
+function pendiente(fmu){
+
+  v_i= (fmu.name).substring(2,(fmu.name).length);
+  v_j="rp"+v_i;
+  c_j = v_j.substring(2,v_j.length)-1; 
+  v_ruta = determina_ruta(document.images[v_j].src); 
+ 
+  switch (contadores[c_j]){
+    // Si la pregunta estaba contestada mal  
+    case 0:{
+  document.forms.resultados.crc.value= parseInt(document.forms.resultados.crc.value)- 1;  
+      document.forms.resultados.crm.value= parseInt(document.forms.resultados.crm.value)- 1; 
+      document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) + 2;
+      break;                       
+    }
+    // Si la pregunta estaba contestada bien
+    case 5:{
+      document.forms.resultados.crc.value= parseInt(document.forms.resultados.crc.value)- 1;
+      document.forms.resultados.crb.value = parseInt(document.forms.resultados.crb.value)- 1;
+      document.forms.resultados.cptos.value = parseInt(document.forms.resultados.cptos.value) - 3;
+      break;          
+    }
+  }
+  contadores[c_j]=2;  
+  document.images[v_j].src=v_ruta + "ncorr.gif";
+
+
+}
+
+function determina_ruta(v_direc){
+  var v_i;
+  var v_l1;
+  
+  v_l1 = v_direc.length;
+  v_i = 1
+  // el verificar la barra invertida es para los archivo mht de microsoft
+  while (v_direc.charAt(v_l1- v_i )!="/" && v_direc.charAt(v_l1- v_i )!="\\"){
+      v_i = v_i +1;
+    }
+  return v_direc.substring(0, v_l1 - v_i+1);
+}
+
+function enviando(){
+    document.formresp.submit();
+
+}

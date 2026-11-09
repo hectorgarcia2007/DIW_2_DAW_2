@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- saved from url=(0112)https://www.a-prima.es/primavera/entrada/entrada.php?tiempo=1759162016.8367&par=2686fdfb0af3e7d103c796c59051577c -->
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <noscript>
+      <meta
+        http-equiv="refresh"
+        content="0; URL=/primavera/loginjavascript.html"
+      />
+    </noscript>
+
+    <!-- Metadatos generales del Proyecto -->
+    <meta name="Author" content="Jorge Fernández Herce" />
+    <meta name="Copyright" content="2008/2009 Jorge Fernández Herce" />
+
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+
+    <meta name="generator" content="PSPad editor, www.pspad.com" />
+
+    <meta name="Description" content="Pantalla de Entrada" />
+    <meta name="Keywords" content="Matemáticas, Problemas, Primavera, Prueba" />
+
+    <title>Acceso validado</title>
+
+    <!-- Icono para navegadores que lo presentan en la barra de direcciones -->
+    <link
+      rel="shortcut icon"
+      href="https://www.a-prima.es/primavera/imagenes/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Hojas de estilos genérica del proyecto -->
+    <link
+      href="./login_files/base.css"
+      rel="stylesheet"
+      type="text/css"
+      id="basecss"
+    />
+    <link href="./login_files/hcc.css" rel="stylesheet" type="text/css" />
+    <link href="./login_files/hcc2.css" rel="stylesheet" type="text/css" />
+
+    <!-- Hojas de estilos de la página actual -->
+    <link
+      href="./PáginaPrincipal_files/paginaMiEstilo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Sentencias JavaScript de scroll para IE y otros-->
+    <script
+      type="text/javascript"
+      src="./PáginaPrincipal_files/js_gral.js.descarga"
+    ></script>
+
+    <!-- Sentencias JavaScript de la página actual-->
+    <script
+      type="text/javascript"
+      src="./PáginaPrincipal_files/pagina.js.descarga"
+    ></script>
+  </head>
+  <body onload="init()">
+    <!--
+Introduce:
+- El logo de la Sociedad
+- El texto con el nombre de la Sociedad
+-->
+
+    <div id="cabecerasociedad">
+      <img id="delta" src="./PáginaPrincipal_files/delta.gif" alt="aprima" />
+      <div id="cabus-0">
+        <span class="l1">A prima.</span>
+        <span class="l2">Sociedad Riojana de profesores de Matemáticas</span>
+      </div>
+    </div>
+    <!--
+Introduce:
+- El nombre del Ususario  validado o el texto de usuario no validado
+-->
+    <div id="cabus-1">Usuario : &nbsp; &nbsp; Acceso libre. No validado</div>
+    <div class="supright">
+      <a href="login.html">Abandonar sesión</a>
+    </div>
+    <div class="box-1" id="menu">
+      <!-- inicio cajas para efecto de borde en relieve -->
+      <div class="box-2">
+        <div class="box-3">
+          <div class="box-4">
+            <!-- fin cajas para efecto de borde en relieve -->
+            <div class="box-5" id="box5">
+              <div class="cab">Roles en la aplicación</div>
+              <form name="foresp">
+                <table class="selec">
+                  <tbody>
+                    <tr class="ccab1">
+                      <th class="cm"></th>
+                      <th class="cn">Funciones</th>
+                    </tr>
+                    <script type="text/javascript">
+                      var vg_nf = 1;
+                      var vg_ff = 0;
+                    </script>
+                    <tr
+                      class="cresp0"
+                      id="f1"
+                      onclick="document.getElementById(&#39;cth1&#39;).focus();"
+                    >
+                      <td class="cm" id="cm1">
+                        <input
+                          type="text"
+                          class="nv"
+                          size="1"
+                          name="cth1"
+                          id="cth1"
+                          onfocus="cambf1(1)"
+                          onkeydown="pulsart1(event, 1)"
+                        />
+                      </td>
+                      <td class="cn impar" id="cn1">Acceso Libre</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </form>
+              <hr />
+              <div class="centrado">
+                <a href="login.html">Salir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="cabus-2" class="box-10">
+      <div class="box-20">
+        <div class="box-30">
+          <div class="box-40">
+            <!-- fin cajas para efecto de borde en relieve -->
+            <div class="box-50">
+              <div id="izqcabfunc">- Menú Principal -</div>
+              <div id="cabfunc">
+                <div id="viscab1" class="invisible">
+                  <form
+                    name="cab3"
+                    action="https://www.a-prima.es/primavera/seleccion/selec_prrece.php"
+                    method="get"
+                  >
+                    <input
+                      type="hidden"
+                      name="tiempo"
+                      value="1759162016.9135"
+                    />
+                    <input type="hidden" name="par" value="" />
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-1" id="contenidos">
+      <!-- inicio cajas para efecto de borde en relieve -->
+      <div class="box-2">
+        <div class="box-3">
+          <div class="box-4">
+            <!-- fin cajas para efecto de borde en relieve -->
+            <div class="box-5" id="box5">
+              <div id="vis0" class="visible cab">
+                Selecciona o cambia de rol en el menú de la izquierda
+              </div>
+
+              <div class="correo">
+                <span class="rojo"
+                  >Para cualquier notificación, sugerencia, información :</span
+                ><br />
+                <img src="./PáginaPrincipal_files/correoaprimarojo.gif" />
+              </div>
+              <div id="vis1" class="visible">
+                <ul>
+                  <li>Ayuda</li>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.a-prima.es/primavera/ayuda/ayuda.php?tiempo=1759162016.9135&amp;par=2b5bf147948ebb62b63fcb15d5e0b244"
+                        >Ayuda de funciones</a
+                      >
+                    </li>
+                  </ul>
+                  <li>Pruebas: Consultas</li>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.a-prima.es/primavera/enunciados/consulta_simple.php?tiempo=1759162016.9135&amp;par=04ecd8bc91b3c796e69d792b2241b616"
+                        >Consulta Enunciados de Prueba</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.a-prima.es/primavera/enunciados/consulta_enunciados.php?tiempo=1759162016.9135&amp;par=d6821830d9d85d92942f3efb84f832e1"
+                        >Consulta de Enunciados y Resultados</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.a-prima.es/primavera/listapassw/lista_ganadores.php?tiempo=1759162016.9135&amp;par=384fb08cf6cdec4bbc193d417fb16838"
+                        >Consulta de Mejores Resultados</a
+                      >
+                    </li>
+                  </ul>
+                  <li>Pruebas: Funciones Especiales</li>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.a-prima.es/primavera/plantilla/genera_plantilla.php?tiempo=1759162016.9135&amp;par=a94621dbe13e1a6d7d65da15cab0a165"
+                        >Generar Hoja de respuestas</a
+                      >
+                    </li>
+                  </ul>
+                  <li>Practicar: Resolver ejercicios</li>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://www.a-prima.es/primavera/enunciadosform/practica_enunciados.php?tiempo=1759162016.9135&amp;par=5297f1172d3e221f88a56ed121ff9608"
+                        >Practicar Ejercicios Aleatorios</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.a-prima.es/primavera/enunciadosform/practica_enunciados_sel.php?tiempo=1759162016.9135&amp;par=77c7bb31e127f1cb575d06027a94b8f2"
+                        >Practicar Ejercicos Seleccionados</a
+                      >
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <br />
+              <div id="vis" 2="" class="cita visible">
+                <p class="cita1">
+                  Es imposible calcular con precisión los hechos que son fruto
+                  del azar.
+                </p>
+                <p class="cita2">Tucídides</p>
+              </div>
+              <br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="piesociedad"></div>
+  </body>
+</html>

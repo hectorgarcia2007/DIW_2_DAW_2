@@ -1,0 +1,14 @@
+/*------------------------------------
+Posición y aspecto del contador
+-----------------------------------*/
+.cont{
+	position: absolute;
+	top: 0;
+	right: 2%;
+}
+.cont td{
+	background-color: #84C3FF;
+	padding: 2px;
+	vertical-align: middle;
+}
+

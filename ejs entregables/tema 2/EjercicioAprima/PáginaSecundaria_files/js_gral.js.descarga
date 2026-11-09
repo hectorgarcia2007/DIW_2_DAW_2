@@ -1,0 +1,142 @@
+
+/*--------------------------------------------------------------
+Esta función:
+1.- Ajusta el tamaño de los textos a la resolución de pantalla del usuario
+2.- Iguala la altura de las subventanas "menu" y "contenidos" si existe la ventana "contenidos"
+*/
+function init() {
+
+//maximizar la ventana
+window.moveTo(0,0);
+if (document.all) {
+top.window.resizeTo(screen.availWidth,screen.availHeight);
+}
+else if (document.layers||document.getElementById) {
+if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+top.window.outerHeight = screen.availHeight;
+top.window.outerWidth = screen.availWidth;
+}
+}
+
+/*
+  if (window.screen.width > 1024 ||  window.screen.height > 768){
+    document.getElementById('basecss').href="../estilos/base.css";
+  }
+for(i=0; i<document.all.length; i++) {
+    if (document.all[i].id == "contenidos"){
+        da = document.all;
+        document.all.menu.all.box5.style.setExpression('height', 'document.body.clientHeight - 160');
+        da.contenidos.all.box5.style.setExpression('height', 'document.body.clientHeight - 160');   
+    }
+  if (document.all[i].id == "detalle") {
+            da = document.all;
+            da.detalle.all.box5.style.setExpression('height', 'document.body.clientHeight - 260');
+  }
+
+  if (document.all[i].id == "unicodetalle") {
+            da = document.all;
+            da.unicodetalle.all.box5.style.setExpression('height', 'document.body.clientHeight - 160');
+  }
+}
+
+
+  if (document.all.contenidos) {
+            da = document.all
+            document.all.menu.all.box5.style.setExpression('height', 'document.body.clientHeight - 160')
+            da.contenidos.all.box5.style.setExpression('height', 'document.body.clientHeight - 160')
+//            da.menu.style.left = "10px"
+//            da.contenidos.style.setExpression('left', '20 + document.all.menu.offsetWidth')
+//            da.contenidos.style.setExpression('width', 'document.body.clientWidth - da.menu.offsetWidth - 30')
+  }
+
+  if (document.all.detalle) {
+            da = document.all;
+            da.detalle.all.box5.style.setExpression('height', 'document.body.clientHeight - 260'):
+
+  }
+*/
+      
+}
+
+/*-----------------------------------------
+  Cambia el aspecto de la fila que tiene el foco sin gestión asociada de la función que trabaje la pérdida de foco. Recibe el número de fila: v_f 
+  Las filas de la tabla empezamos a contarlas desde 1. El valor de fila: 0 indicará que el foco no se encuentra sobre la tabla.
+-------------------------------------------- */
+function cambf1(v_f){
+  var v_id;
+  var v_id2;
+
+  if (vg_ff !=0){
+    v_id = "f"+vg_ff;
+    document.getElementById(v_id).className = "cresp0"; 
+    // si la fila marcada hasta ahora tenía detalle asociado visible lo oculto
+    v_id="vis"+vg_ff;
+    if (document.getElementById(v_id)){
+    document.getElementById(v_id).className="invisible";
+    }
+    // si la fila marcada hasta ahora tenía cabecera asociada visible la oculto
+    v_id="viscab"+vg_ff;
+    if (document.getElementById(v_id)){
+    document.getElementById(v_id).className="invisible";
+    }
+  }
+  
+  // marco la nueva fila que recibe el foco si es distinta 
+  v_id = "f"+v_f;
+  v_id2="cth"+v_f;
+  if(v_f !=0){
+    document.getElementById(v_id2).focus(); 
+    document.getElementById(v_id).className = "cresp1";
+  }
+  // si la nueva fila marcada tiene detalle asociado lo hago visible
+  v_id="vis"+v_f;
+  if (document.getElementById(v_id)){
+    document.getElementById(v_id).className="visible";
+  }
+  // si la nueva fila marcada tiene cabecera asociada la hago visible
+  v_id="viscab"+v_f;
+  if (document.getElementById(v_id)){
+    document.getElementById(v_id).className="visible";
+  }  
+  // marco la fila actual como activa
+  vg_ff=v_f;
+}
+
+/* ------------------------------------------------
+ Función para recoger las pulsaciones del teclado que afecten a las tablas de selección (class="selec") .
+--------------------------------------------------*/
+function pulsart1(evt,v_f)
+{ 
+  var vTecla="vacio";
+  var v_id2; 
+
+  // Para nevegadores que deriven de Netscape 
+  if (document.layers){
+
+    vTecla = evt.which;
+
+  }else {
+    // Para navegadores que deriven de IE y otros
+    vTecla = evt.keyCode;
+  }
+
+  // Si se ha detectado la pulsación de una tecla
+  if (vTecla!="vacio"){
+    //Detectar Felcha abajo y bajar línea. Si estoy abajo me quedo ahí
+    if (vTecla==40){
+      if (v_f >=1 && v_f< vg_nf){
+        var v_id2="cth"+(v_f+1);
+        document.getElementById(v_id2).focus();
+        cambf1(v_f+1);
+      }
+    }
+    //Detectar Felcha arriba y subir línea. Si estoy arriba me qudo ahí
+    if (vTecla==38){
+      if (v_f >1 && v_f<= vg_nf){
+        var v_id2="cth"+(v_f-1);
+        document.getElementById(v_id2).focus();
+        cambf1(v_f-1);
+      }
+    }	
+  }	
+}

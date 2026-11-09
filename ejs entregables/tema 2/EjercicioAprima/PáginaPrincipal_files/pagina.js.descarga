@@ -1,0 +1,60 @@
+// JavaScript Document
+
+/*--------------------------------------------------------------
+Esta función:
+1.- Ajusta el tamaño de los textos a la resolución de pantalla del usuario
+2.- Iguala la altura de las subventanas "menu" y "contenidos" si existe la ventana "contenidos"
+*/
+function inita() {
+    /* NOT INVENTED HERE */
+    d = document;
+                alert(document.body.clientHeight);
+    if (d.all) {
+
+        if (d.all.contenidos.all[3].style.setExpression) {
+
+            da = d.all
+            da.menu.all[3].style.setExpression('height', 'document.body.clientHeight - 100')
+            //da.contenidos.all[3].style.setExpression('height', 'screen.height  - 300')
+
+            da.menu.style.left = "10px"
+            da.contenidos.style.setExpression('left', '20 + document.all.menu.offsetWidth')
+            da.contenidos.style.setExpression('width', 'document.body.clientWidth - da.menu.offsetWidth - 30')
+        }
+    }
+      
+}
+/*-----------------------------------------
+  Cambia el aspecto de la cabecera asociada a la selección.
+-------------------------------------------- */
+function cambf2(v_f,v_ct){
+  var v_id;
+  var v_id2;
+  
+  if (vg_ff !=0){
+
+
+    v_id="vis"+vg_ff;
+    if (document.getElementById(v_id)){
+    document.getElementById(v_id).className="invisible";
+    }
+  }
+  
+  // marco la nueva fila que recibe el foco si es distinta 
+  v_id = "f"+v_f;
+  v_id2="cth"+v_f;
+  if(v_f !=0){
+    document.getElementById(v_id2).focus(); 
+    document.getElementById(v_id).className = "cresp1";
+  }
+  // si la nueva fila marcada tiene detalle asociado lo hago visible
+  v_id="vis"+v_f;
+  if (document.getElementById(v_id)){
+    document.getElementById(v_id).className="visible";
+  }
+  
+  // marco la fila actual como activa
+  vg_ff=v_f;
+}
+
+

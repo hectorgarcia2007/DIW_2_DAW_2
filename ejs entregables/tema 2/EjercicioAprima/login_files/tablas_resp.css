@@ -1,0 +1,102 @@
+/*-------------------------------------
+Estilos específicos para las tablas de respuestas
+-------------------------------------*/
+
+table.resp{
+background-color: #A9DBFB;
+margin-left: auto;
+margin-right: auto;
+border-collapse: collapse;
+}
+
+table.resp th {
+	text-align: center;
+	border-bottom: medium double Black;
+}
+
+table.resp th.cn{
+	width: 90px;
+	border-right: thick double Black;
+	border-left: thick double Black;
+}
+table.resp td.cn {
+	width: 90px;
+	text-align: center;
+	border-left: thick double Black;
+	border-right: thick double Black;
+	border-top: thin solid Black;	
+	border-bottom: thin solid Black;	
+	font-size: 110%;
+	font-weight: bold;
+}
+
+table.resp th.cr{
+	width: 60px;
+}
+
+table.resp td.cr {
+
+	text-align: center;
+	border-left: thick double Black;
+	border-right: thick double Black;
+	border-top: thin solid Black;	
+	border-bottom: thin solid Black;	
+	font-size: 110%;
+}
+
+table.resp th.cb{
+		border-left: thick double Black;
+}
+
+table.resp td.cb{
+	border-bottom: thin solid Black;	
+}
+
+table.resp td.impar{
+	background-color: #DBDBDB;
+}
+
+table.resp td.par{
+	background-color: White;
+}
+
+table.resp td.cb{
+	border-left: thick double Black;
+	text-align: center;
+	font-size: 110%;
+
+}
+/* Fila con el foco para seleccionar */
+table.resp tr.cresp1 td{
+	background-color: #5ED85F;
+}
+table.resp tr.cresp1 td.cm{
+	background-color: transparent;
+}
+
+
+/* Celdas marcadas */
+table.resp tr.cresp0 td.marca{
+	background-color: Fuchsia;
+}
+table.resp tr.cresp1 td.marca{
+	background-color: Fuchsia;
+}
+
+
+/* Celda especial para fijar el foco */
+.nv{
+	font-size: xx-small;
+	background-color: White;
+	color: White;
+	border: none;
+}
+
+#envio{
+	text-align: center;
+}
+
+#confirma{
+		text-align: center;
+}
+
