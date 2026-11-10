@@ -23,6 +23,8 @@
     <meta name="Description" content="Pantalla de Entrada" />
     <meta name="Keywords" content="Matemáticas, Problemas, Primavera, Prueba" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Acceso validado</title>
 
     <!-- Icono para navegadores que lo presentan en la barra de direcciones -->
@@ -32,7 +34,7 @@
       type="image/x-icon"
     />
 
-    <!-- Hojas de estilos genérica del proyecto -->
+    <!-- Hojas de estilos genérica del proyecto
     <link
       href="./login_files/base.css"
       rel="stylesheet"
@@ -42,7 +44,7 @@
     <link href="./login_files/hcc.css" rel="stylesheet" type="text/css" />
     <link href="./login_files/hcc2.css" rel="stylesheet" type="text/css" />
 
-    <!-- Hojas de estilos de la página actual -->
+     Hojas de estilos de la página actual -->
     <link
       href="./PáginaPrincipal_files/paginaMiEstilo.css"
       rel="stylesheet"
@@ -67,21 +69,22 @@ Introduce:
 - El logo de la Sociedad
 - El texto con el nombre de la Sociedad
 -->
-
-    <div id="cabecerasociedad">
-      <img id="delta" src="./PáginaPrincipal_files/delta.gif" alt="aprima" />
-      <div id="cabus-0">
-        <span class="l1">A prima.</span>
-        <span class="l2">Sociedad Riojana de profesores de Matemáticas</span>
+    <div id="cabecera">
+      <div id="cabecerasociedad">
+        <img id="delta" src="./PáginaPrincipal_files/delta.gif" alt="aprima" />
+        <div id="cabus-0">
+          <span class="l1">A prima.</span>
+          <span class="l2">Sociedad Riojana de profesores de Matemáticas</span>
+        </div>
       </div>
-    </div>
-    <!--
+      <!--
 Introduce:
 - El nombre del Ususario  validado o el texto de usuario no validado
 -->
-    <div id="cabus-1">Usuario : &nbsp; &nbsp; Acceso libre. No validado</div>
-    <div class="supright">
-      <a href="login.html">Abandonar sesión</a>
+      <div id="cabus-1">Usuario : &nbsp; &nbsp; Acceso libre. No validado</div>
+      <div class="supright">
+        <a href="login.html">Abandonar sesión</a>
+      </div>
     </div>
     <div class="box-1" id="menu">
       <!-- inicio cajas para efecto de borde en relieve -->
@@ -95,30 +98,8 @@ Introduce:
                 <table class="selec">
                   <tbody>
                     <tr class="ccab1">
-                      <th class="cm"></th>
-                      <th class="cn">Funciones</th>
-                    </tr>
-                    <script type="text/javascript">
-                      var vg_nf = 1;
-                      var vg_ff = 0;
-                    </script>
-                    <tr
-                      class="cresp0"
-                      id="f1"
-                      onclick="document.getElementById(&#39;cth1&#39;).focus();"
-                    >
-                      <td class="cm" id="cm1">
-                        <input
-                          type="text"
-                          class="nv"
-                          size="1"
-                          name="cth1"
-                          id="cth1"
-                          onfocus="cambf1(1)"
-                          onkeydown="pulsart1(event, 1)"
-                        />
-                      </td>
-                      <td class="cn impar" id="cn1">Acceso Libre</td>
+                      <td class="cn">Funciones</td>
+                      <td class="cn" id="cn1">Acceso Libre</td>
                     </tr>
                   </tbody>
                 </table>
@@ -139,7 +120,7 @@ Introduce:
           <div class="box-40">
             <!-- fin cajas para efecto de borde en relieve -->
             <div class="box-50">
-              <div id="izqcabfunc">- Menú Principal -</div>
+              <div id="izqcabfunc"></div>
               <div id="cabfunc">
                 <div id="viscab1" class="invisible">
                   <form

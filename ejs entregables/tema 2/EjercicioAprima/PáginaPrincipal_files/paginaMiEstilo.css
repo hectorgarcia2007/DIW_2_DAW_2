@@ -1,55 +1,166 @@
-
 /*
 Ajuste de posici�n de cuadros de pantalla predefinidos en hcc.css y hcc2.css
 */
-#menu {
-	position: absolute;
-	top: 90px;
-	left: 1%;
-	width: 20%;
-}
-#contenidos {
-	position: absolute;
-	top: 90px;
-	left: 22%;
-	width: 78%;
-}
-* > #menu {
-  	bottom   : 2px;	
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
-* > #contenidos{
-	width: 77%;
-  	bottom: 2px;
+td {
+  display: flex;
+  margin-bottom: 10%;
+  padding: 10%;
+}
+
+td:hover {
+  background-color: rgb(0, 49, 112);
+  color: white;
+}
+
+.selec {
+  width: 100%;
+}
+
+#menu {
+  position: absolute;
+  top: 90px;
+  left: 1%;
+  width: 20%;
+  border: 1px solid rgb(170, 215, 255);
+  padding: 2%;
+}
+#contenidos {
+  position: absolute;
+  top: 90px;
+  left: 22%;
+  width: 78%;
+}
+* > #menu {
+  bottom: 2px;
+}
+
+* > #contenidos {
+  width: 77%;
+  bottom: 2px;
+}
+
+#cabecerasociedad {
+  display: flex;
+  float: left;
+}
+
+#cabus-1 {
+  display: flex;
+  background-color: rgb(0, 49, 112);
+  color: white;
+  padding: 1vw;
+  border-radius: 3%;
+}
+
+#cabecera {
+  display: flex;
+  background-color: rgb(170, 215, 255);
+  align-items: center;
+  width: 100vw;
+  height: 5vw;
+  justify-content: space-around;
+}
+
+#contenidos {
+  background-color: white;
+  border: 1px solid rgb(170, 215, 255);
+  padding: 2%;
+}
+
+#vis0 {
+  padding: 3%;
+}
+
+#vis1 li a:hover {
+  background-color: rgb(0, 49, 112);
+  color: white;
+}
+#vis {
+  display: block;
+}
+
+.centrado {
+  text-align: center;
+}
+
+.centrado a {
+  background-color: aliceblue;
+  display: flex;
+  padding: 5%;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+.centrado a:hover {
+  background-color: rgb(87, 87, 87);
+  color: white;
+}
+
+.supright {
+  display: flex;
+  background-color: rgb(0, 49, 112);
+
+  padding: 1vw;
+  border-radius: 3%;
+}
+
+.supright a {
+  color: white;
+}
+
+.l1 {
+  font-weight: bold;
+  font-size: xx-large;
+  display: flex;
+}
+
+.correo {
+  display: flex;
+  justify-content: center;
 }
 
 /*
 Texto fijo de cabecera interna en los cuadros de pantalla menu y contenidos
 */
-.cab{
-	font-weight: bold;
-	padding-bottom: 10px;
-	margin-bottom: 3px;
-	border-bottom: medium groove Gray;
+.cab {
+  font-weight: bold;
+  padding-bottom: 10px;
+  margin-bottom: 3px;
+  border-bottom: medium groove Gray;
+  background-color: rgb(0, 49, 112);
+  color: white;
+  text-align: center;
+  padding: 5%;
 }
 
 /*-------------------------------------------------
 Citas en la pantalla de entrada
 -------------------------------------------------*/
 .cita {
-	/*position: absolute;*/
-	margin-left: 29%;
-	width: 70%;
-	border-bottom: medium ridge Gray;
-	border-top: medium groove Gray;
+  /*position: absolute;*/
+  margin-left: 29%;
+  width: 70%;
+  border-bottom: medium ridge Gray;
+  border-top: medium groove Gray;
 }
-.cita1{
-	font-size: small;
-	font-style: italic;
-	text-align: left;
+.cita1 {
+  font-size: small;
+  font-style: italic;
+  text-align: left;
 }
-.cita2{
-	font-size: small;
-	font-weight: bold;
-	text-align: right;
+.cita2 {
+  font-size: small;
+  font-weight: bold;
+  text-align: right;
+}
+
+.rojo {
+  color: red;
 }
