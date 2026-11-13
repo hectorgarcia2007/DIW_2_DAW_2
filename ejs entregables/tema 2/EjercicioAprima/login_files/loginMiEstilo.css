@@ -9,6 +9,10 @@ body {
   width: 100vw;
 }
 
+form {
+  margin-top: 5%;
+}
+
 #cuerpoc {
   width: 50%;
   margin: 3% auto auto auto;
@@ -23,32 +27,8 @@ body {
   justify-content: center;
 }
 
-
-.cab {
-  font-weight: bold;
-  font-size: xx-large;
-}
-
 #informacionAcceso {
   font-size: large;
-}
-
-.login {
-  width: 100%;
-  padding: 1%;
-  border: 1px solid rgba(0, 0, 0, 0.247);
-}
-
-.login:hover {
-  border: 1px solid rgba(0, 0, 0, 0.712);
-}
-
-form {
-  margin-top: 5%;
-}
-
-.tbnor li {
-  list-style-type: none;
 }
 
 #loginIntroduccion {
@@ -77,6 +57,25 @@ form {
   width: 100%;
   align-items: center;
   gap: 5%;
+}
+
+.cab {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.login {
+  width: 100%;
+  padding: 1%;
+  border: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.login:hover {
+  border: 1px solid rgba(0, 0, 0, 0.712);
+}
+
+.tbnor li {
+  list-style-type: none;
 }
 
 .correo1 {

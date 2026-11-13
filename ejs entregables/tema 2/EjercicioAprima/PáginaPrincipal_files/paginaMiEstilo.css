@@ -18,10 +18,6 @@ td:hover {
   color: white;
 }
 
-.selec {
-  width: 100%;
-}
-
 #menu {
   position: absolute;
   top: 90px;
@@ -63,7 +59,7 @@ td:hover {
   background-color: rgb(170, 215, 255);
   align-items: center;
   width: 100vw;
-  height: 5vw;
+  height: 10%;
   justify-content: space-around;
 }
 
@@ -83,6 +79,10 @@ td:hover {
 }
 #vis {
   display: block;
+}
+
+.selec {
+  width: 100%;
 }
 
 .centrado {
@@ -126,9 +126,6 @@ td:hover {
   justify-content: center;
 }
 
-/*
-Texto fijo de cabecera interna en los cuadros de pantalla menu y contenidos
-*/
 .cab {
   font-weight: bold;
   padding-bottom: 10px;
@@ -140,9 +137,6 @@ Texto fijo de cabecera interna en los cuadros de pantalla menu y contenidos
   padding: 5%;
 }
 
-/*-------------------------------------------------
-Citas en la pantalla de entrada
--------------------------------------------------*/
 .cita {
   /*position: absolute;*/
   margin-left: 29%;
@@ -163,4 +157,33 @@ Citas en la pantalla de entrada
 
 .rojo {
   color: red;
+}
+
+@media (max-width: 768px) {
+  #cabecera {
+    height: 15vh;
+  }
+
+  #cabecerasociedad {
+    width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  #cabecera {
+    height: 15vh;
+  }
+
+  #cabecerasociedad {
+    width: 100%;
+  }
+
+  #cabus-1 {
+    display: none;
+  }
+
+  .correo img {
+    width: 30vw;
+    height: auto;
+  }
 }
