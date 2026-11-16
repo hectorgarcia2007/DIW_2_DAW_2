@@ -1,0 +1,19 @@
+@use "sass:map";
+
+// Variables globales
+$font-stack: 'Segoe UI', Roboto, sans-serif;
+$spacing: 1rem;
+
+// Paleta base
+$primary-color: #4a90e2;
+$secondary-color: #2ecc71;
+
+$sizes: (
+    small: 0.8rem,
+    medium: 1rem,
+    large: 1.3rem
+);
+
+@function size($tamano, $property) {
+  @return map.get(map.get($sizes, $tamano), $property);
+}

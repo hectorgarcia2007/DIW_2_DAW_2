@@ -1,0 +1,16 @@
+@use "mixins";
+
+
+.card {
+    &.pequeno {
+        @include mixins.shadow(1);
+    }
+
+    &.mediano {
+        @include mixins.shadow(2);
+    }
+
+    &.otros {
+        @include mixins.shadow(-1);
+    }
+}

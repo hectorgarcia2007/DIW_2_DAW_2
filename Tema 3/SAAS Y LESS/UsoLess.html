@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demostración de LESS en Navegador</title>
+
+    <!-- =======================================================
+       LESS embebido y autoexplicativo
+       ======================================================= -->
+    <style type="text/less">
+
+      /* ==========================================================
+         1️⃣ VARIABLES
+         ----------------------------------------------------------
+         Las variables permiten reutilizar valores de color, medida,
+         tipografía, etc. usando nombres en lugar de valores fijos.
+         ========================================================== */
+      @color-principal: #3498db;
+      @espaciado: 10px;
+
+      .boton {
+        background-color: @color-principal;
+        color: white;
+        padding: @espaciado * 1.5 @espaciado * 2;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken(@color-principal, 10%);
+        }
+      }
+
+      /* ==========================================================
+         2️⃣ ANIDAMIENTO DE SELECTORES
+         ----------------------------------------------------------
+         En LESS (y Sass) se pueden anidar reglas dentro de otras,
+         evitando repetir el nombre del selector padre.
+         ========================================================== */
+      nav {
+        background: #f0f0f0;
+        padding: 10px;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        li {
+          display: inline-block;
+          margin-right: 15px;
+        }
+
+        a {
+          text-decoration: none;
+          color: #333;
+
+          &:hover {
+            color: #e74c3c;
+          }
+        }
+      }
+
+      /* ==========================================================
+         3️⃣ MIXINS
+         ----------------------------------------------------------
+         Los mixins son bloques de código reutilizables, similares
+         a funciones, que pueden aceptar parámetros.
+         ========================================================== */
+      .borde-redondeado(@radio) {
+        border-radius: @radio;
+        -webkit-border-radius: @radio;
+      }
+
+      .caja {
+        width: 200px;
+        height: 100px;
+        background: #9b59b6;
+        .borde-redondeado(15px);
+      }
+
+      /* ==========================================================
+         4️⃣ OPERACIONES MATEMÁTICAS
+         ----------------------------------------------------------
+         LESS permite realizar cálculos directamente en el código.
+         ========================================================== */
+      @ancho-base: 100px;
+
+      .columna {
+        width: @ancho-base * 3;
+        margin: @ancho-base / 10;
+        height: @ancho-base * 1.2;
+        background: lighten(@color-principal, 10%);
+      }
+
+      /* ==========================================================
+         5️⃣ HERENCIA (EXTEND)
+         ----------------------------------------------------------
+         Permite heredar propiedades de otro selector sin duplicar
+         código CSS.
+         ========================================================== */
+      .mensaje {
+        padding: 10px;
+        border: 1px solid #ccc;
+        background: #ecf0f1;
+        color: #333;
+      }
+
+      .alerta {
+        &:extend(.mensaje);
+        border-color: #e74c3c;
+        background: #f9e2e0;
+        color: #c0392b;
+      }
+
+      /* ==========================================================
+         6️⃣ FUNCIONES PERSONALIZADAS
+         ----------------------------------------------------------
+         Se pueden crear mixins que actúan como funciones para
+         calcular valores dinámicos.
+         ========================================================== */
+      .calcular-espaciado(@multiplicador) {
+        margin-bottom: 8px * @multiplicador;
+      }
+
+      .card {
+        width: 200px;
+        height: 100px;
+        background: #2ecc71;
+        .calcular-espaciado(3);
+      }
+
+
+
+      /* ==========================================================
+         ESTILOS GENERALES DE LA DEMO
+         ========================================================== */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+
+      section {
+        border-top: 1px solid #ccc;
+        margin-top: 40px;
+        padding-top: 20px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: #2c3e50;
+      }
+    </style>
+
+    <!-- Carga del compilador LESS en el navegador -->
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
+  </head>
+  <body>
+    <h1>Demostración práctica de LESS</h1>
+    <p>
+      Cada bloque muestra una característica distinta del preprocesador CSS
+      <strong>LESS</strong>. No requiere compilación: todo se procesa en el
+      navegador.
+    </p>
+
+    <!-- =======================================================
+       1️⃣ VARIABLES
+       ======================================================= -->
+    <section>
+      <h2>1️⃣ Variables</h2>
+      <button class="boton">Botón con variable de color</button>
+    </section>
+
+    <!-- =======================================================
+       2️⃣ ANIDAMIENTO DE SELECTORES
+       ======================================================= -->
+    <section>
+      <h2>2️⃣ Anidamiento</h2>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- =======================================================
+       3️⃣ MIXINS
+       ======================================================= -->
+    <section>
+      <h2>3️⃣ Mixins</h2>
+      <div class="caja"></div>
+    </section>
+
+    <!-- =======================================================
+       4️⃣ OPERACIONES MATEMÁTICAS
+       ======================================================= -->
+    <section>
+      <h2>4️⃣ Operaciones matemáticas</h2>
+      <div class="columna"></div>
+    </section>
+
+    <!-- =======================================================
+       5️⃣ HERENCIA (EXTEND)
+       ======================================================= -->
+    <section>
+      <h2>5️⃣ Herencia (extend)</h2>
+      <div class="mensaje">Mensaje normal</div>
+      <div class="alerta">Mensaje de alerta heredado</div>
+    </section>
+
+    <!-- =======================================================
+       6️⃣ FUNCIONES PERSONALIZADAS
+       ======================================================= -->
+    <section>
+      <h2>6️⃣ Funciones personalizadas</h2>
+      <div class="card"></div>
+    </section>
+  </body>
+</html>

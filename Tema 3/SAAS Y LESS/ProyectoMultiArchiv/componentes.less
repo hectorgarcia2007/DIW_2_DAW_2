@@ -1,0 +1,23 @@
+/* componentes.less
+   Define estilos que usan variables y mixins
+--------------------------------------------------*/
+@import "variables.less";
+@import "mixins.less";
+
+.boton-verde {
+  .boton-base();
+  background: @color-primario;
+
+  &:hover {
+    background: darken(@color-primario, 10%);
+  }
+}
+
+.boton-oscuro {
+  .boton-base();
+  background: @color-secundario;
+
+  &:hover {
+    background: lighten(@color-secundario, 10%);
+  }
+}
