@@ -1,0 +1,20 @@
+@use "sass:map";
+
+$header-color: #fff;
+
+@mixin fondo($color) {
+    background-color: theme($color, background);
+    color: theme($color, text);
+}
+
+$temas: (
+    primario: (background: #4a90e2,
+        text: #eaeaea),
+    secundario: (background: #2ecc71,
+        text: #eaeaea)
+);
+
+// Función para obtener valores del mapa
+@function theme($color, $property) {
+    @return map.get(map.get($temas, $color), $property);
+}

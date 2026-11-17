@@ -2,6 +2,20 @@
 
 
 .card {
+    $tono: black;
+
+    body.light {
+        @include mixins.themed(light);
+        $tono: black;
+    }
+
+    body.dark {
+        @include mixins.themed(dark);
+        $tono: white;
+    }
+
+    border: 1px solid $tono;
+
     &.pequeno {
         @include mixins.shadow(1);
     }
