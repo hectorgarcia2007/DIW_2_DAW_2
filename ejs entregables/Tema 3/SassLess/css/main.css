@@ -32,6 +32,15 @@
   background-color: rgb(41.4, 183.6, 101.7);
 }
 
+main {
+  margin: 10%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .card body.light {
   background-color: #ffffff;
   color: #222222;
