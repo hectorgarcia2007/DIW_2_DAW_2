@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tema 8 Ej 6: Fluid Typography (Clamp)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+
+      body {
+        background-color: #0f172a;
+        color: #f8fafc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        padding: 2rem;
+        overflow: hidden;
+      }
+
+      /* REQUISITO: h1, h2, p que escapen con el viewport */
+      /* Usamos clamp(mínimo, preferido, máximo) para un control total */
+
+      h1 {
+        /* De 2.5rem a 5rem según el ancho de pantalla */
+        font-size: clamp(2.5rem, 8vw + 1rem, 6rem);
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(to right, #38bdf8, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        /* De 1.5rem a 3rem */
+        font-size: clamp(1.5rem, 4vw + 0.5rem, 3rem);
+        color: #94a3b8;
+        margin-bottom: 2rem;
+        font-weight: 400;
+      }
+
+      p {
+        /* De 1rem a 1.5rem */
+        font-size: clamp(1rem, 2vw + 0.2rem, 1.5rem);
+        max-width: 800px;
+        line-height: 1.6;
+        color: #cbd5e1;
+        margin-bottom: 3rem;
+      }
+
+      .guide {
+        position: absolute;
+        bottom: 2rem;
+        font-size: 0.8rem;
+        color: #475569;
+        border-top: 1px solid #1e293b;
+        padding-top: 1rem;
+        width: 80%;
+      }
+
+      code {
+        color: #38bdf8;
+        background: #1e293b;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+      }
+
+      /* Contenedor visual para ver el escalado */
+      .viewport-indicator {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(56, 189, 248, 0.1);
+        border: 1px solid #38bdf8;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        color: #38bdf8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="viewport-indicator">
+      Redimensiona la ventana para ver el cambio
+    </div>
+
+    <h1>Tipografía Fluida</h1>
+    <h2>Adaptación perfecta sin Media Queries</h2>
+
+    <p>
+      Este ejercicio utiliza la función <code>clamp()</code> de CSS para crear
+      textos que escalan suavemente con el tamaño del viewport. A diferencia de
+      usar solo <code>vw</code>, <code>clamp</code> nos permite definir un
+      tamaño mínimo y máximo de seguridad.
+    </p>
+
+    <div class="guide">
+      Usando <code>font-size: clamp(min, val_vw, max);</code>
+    </div>
+  </body>
+</html>

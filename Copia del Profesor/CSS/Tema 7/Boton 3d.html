@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C_T7_Ej2: Card Flip 3D</title>
+    <style>
+              body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+              .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 200px;
+          perspective: 1000px; /* Perspectiva en el contenedor padre */
+          margin: 50px auto;
+      }
+      .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.8s;
+          transform-style: preserve-3d;
+      }
+      .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+      }
+      .flip-card-front, .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden; /* Safari */
+          backface-visibility: hidden;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          color: white;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      .flip-card-front {
+          background-color: #212529;
+      }
+      .flip-card-back {
+          background-color: #0d6efd;
+          transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Frontal (Pasa el ratón)</div>
+        <div class="flip-card-back">Trasera (Oculta)</div>
+      </div>
+    </div>
+  </body>
+</html>

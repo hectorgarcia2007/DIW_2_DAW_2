@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tema 6 Ej 6: Alineación en Celda (Self)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f8fafc;
+        padding: 40px;
+        color: #334155;
+        min-height: 100vh;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #7c3aed;
+        /* Violet-600 */
+        text-align: center;
+      }
+
+      .contenedor-grid {
+        display: grid;
+        /* REQUISITO: Grid de 3x2 */
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 200px);
+
+        gap: 20px;
+        background-color: #ede9fe;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px dashed #a78bfa;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      /* CELDA PARA VISUALIZAR EL ESPACIO */
+      .celda-visual {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px dashed #c4b5fd;
+        border-radius: 8px;
+        position: relative;
+      }
+
+      /* REQUISITO: Cada carta centrada con justify-self y align-self */
+      .carta {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+        /* ALINEACIÓN INDIVIDUAL SOLICITADA */
+        justify-self: center;
+        /* Centrado horizontal en la celda */
+        align-self: center;
+        /* Centrado vertical en la celda */
+
+        transition: transform 0.3s ease;
+      }
+
+      .carta:hover {
+        transform: scale(1.1);
+      }
+
+      .info {
+        margin-top: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      code {
+        background: #f1f5f9;
+        padding: 2px 4px;
+        border-radius: 4px;
+        color: #6d28d9;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Ejercicio 6: Alineación Individual (Self)</h1>
+    <p style="text-align: center; margin-bottom: 20px">
+      Utilizando <code>justify-self</code> y <code>align-self</code> para
+      posicionar elementos dentro de sus celdas.
+    </p>
+
+    <div class="contenedor-grid">
+      <div class="carta">Carta 1</div>
+      <div class="carta">Carta 2</div>
+      <div class="carta">Carta 3</div>
+      <div class="carta">Carta 4</div>
+      <div class="carta">Carta 5</div>
+      <div class="carta">Carta 6</div>
+    </div>
+
+    <div class="info">
+      <p><strong>Diferencia clave:</strong></p>
+      <ul>
+        <li>
+          <code>justify-self</code>: Alinea el item en el eje de las filas
+          (horizontal).
+        </li>
+        <li>
+          <code>align-self</code>: Alinea el item en el eje de las columnas
+          (vertical).
+        </li>
+      </ul>
+      <p>
+        A diferencia de <code>justify-items</code> o
+        <code>align-items</code> (que se aplican en el contenedor), las
+        propiedades <strong>-self</strong> permiten que cada hijo tenga su
+        propia alineación independiente.
+      </p>
+    </div>
+  </body>
+</html>

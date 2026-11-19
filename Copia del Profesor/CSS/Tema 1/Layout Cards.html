@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Ej5: Layout de Artículos</title>
+    <!-- CSS Nativo - Sin frameworks -->
+    <style>
+      /* CSS Reset Básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        background-color: #f3f4f6;
+        color: #333;
+      }
+
+      /* Variables CSS */
+      :root {
+        --primary-color: #4f46e5;
+        --primary-hover: #4338ca;
+        --secondary-color: #10b981;
+        --bg-color: #ffffff;
+        --text-color: #374151;
+        --text-muted: #6b7280;
+        --border-color: #e5e7eb;
+        --radius: 建设: 12px;
+        --shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-hover:
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        --transition: all 0.3s ease;
+      }
+
+      /* HEADER & NAVBAR */
+      header {
+        background-color: var(--bg-color);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .navbar {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--primary-color);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover,
+      .nav-links a.active {
+        color: var(--primary-color);
+      }
+
+      .btn-donate {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1.2rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.2s;
+        display: none;
+        /* Hidden on small screens, shown on desktop via MQ */
+      }
+
+      .btn-donate:hover {
+        background-color: var(--primary-hover);
+      }
+
+      /* Hamburger Menu (Mobil) */
+      .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        color: var(--text-color);
+      }
+
+      /* MAIN CONTENT */
+      main {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h1 {
+        font-size: 2.5rem;
+        color: #111827;
+        margin-bottom: 0.5rem;
+      }
+
+      .section-header p {
+        color: var(--text-muted);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* GRID OF CARDS */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      /* SINGLE CARD */
+      .card {
+        background-color: var(--bg-color);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .card-image-wrap {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .card:hover .card-img {
+        transform: scale(1.05);
+      }
+
+      .badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background-color: var(--secondary-color);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .badge.css {
+        background-color: #2563eb;
+      }
+
+      .badge.html {
+        background-color: #ea580c;
+      }
+
+      .card-content {
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .card-title {
+        font-size: 1.25rem;
+        color: #111827;
+        margin-bottom: 0.75rem;
+        line-height: 1.4;
+      }
+
+      .card-text {
+        color: var(--text-muted);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+        /* Pushes button to bottom */
+      }
+
+      .btn-read-more {
+        display: inline-block;
+        text-align: center;
+        padding: 0.75rem 1rem;
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: var(--transition);
+        cursor: pointer;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      .btn-read-more:hover {
+        background-color: var(--primary-color);
+        color: white;
+      }
+
+      /* RESPONSIVE MEDIA QUERIES */
+      @media (min-width: 768px) {
+        .btn-donate {
+          display: block;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        .nav-links {
+          display: none;
+          /* Simplified for pure CSS exercise without JS */
+        }
+
+        .navbar {
+          padding: 1rem;
+        }
+
+        main {
+          padding: 0 1rem;
+        }
+
+        .section-header h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header con Navbar Responsive -->
+    <header>
+      <nav class="navbar">
+        <a href="#" class="brand">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+          DesignDev
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+
+        <ul class="nav-links">
+          <li><a href="#" class="active">Blog</a></li>
+          <li><a href="#">Tutoriales</a></li>
+          <li><a href="#">Recursos</a></li>
+          <li><a href="#">Comunidad</a></li>
+        </ul>
+
+        <a href="#" class="btn-donate">Suscribirse</a>
+      </nav>
+    </header>
+
+    <!-- Main con Grid de Cards -->
+    <main>
+      <div class="section-header">
+        <h1>Últimas Publicaciones</h1>
+        <p>
+          Aprende, inspírate y mejora tus habilidades de desarrollo web con
+          nuestros artículos semanales.
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <span class="badge css">CSS</span>
+            <img
+              src="../../../img/product.png"
+              alt="Código CSS"
+              class="card-img"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">Grid vs Flexbox: ¿Cuándo usar cada uno?</h2>
+            <p class="card-text">
+              Una guía definitiva para entender las diferencias filosóficas y
+              prácticas entre sistemas unidimensionales y bidimensionales
+              nativos.
+            </p>
+            <a href="#" class="btn-read-more">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <span class="badge">Diseño UI</span>
+            <img
+              src="../../../img/product.png"
+              alt="Diseño de Interfaces"
+              class="card-img"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">
+              Micro-interacciones que mejoran la retención
+            </h2>
+            <p class="card-text">
+              Las pequeñas animaciones en estados hover y active son
+              importantes. Aprende a crear botones que deleiten a los usuarios
+              finales.
+            </p>
+            <a href="#" class="btn-read-more">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <span class="badge html">HTML5</span>
+            <img
+              src="../../../img/product.png"
+              alt="Código Front"
+              class="card-img"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">La importancia de la Semántica Web</h2>
+            <p class="card-text">
+              Usar divs para todo ya no es una opción. Cómo estructurar el DOM
+              para beneficiar al SEO y a los lectores de pantalla drásticamente.
+            </p>
+            <a href="#" class="btn-read-more">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <span class="badge css">Responsive</span>
+            <img
+              src="../../../img/product.png"
+              alt="Responsivo"
+              class="card-img"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">Container Queries vs Media Queries</h2>
+            <p class="card-text">
+              El futuro del diseño adaptativo ha llegado. Descubre cómo aislar
+              estilos al contenedor padre en lugar del viewport global.
+            </p>
+            <a href="#" class="btn-read-more">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <span class="badge">Herramientas</span>
+            <img
+              src="../../../img/product.png"
+              alt="DevTools"
+              class="card-img"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">Dominando las Chrome DevTools de estilo</h2>
+            <p class="card-text">
+              Atajos y herramientas ocultas en el inspector de elementos que
+              multiplicarán por tres tu velocidad depurando hojas de estilo y
+              layouts.
+            </p>
+            <a href="#" class="btn-read-more">Leer más</a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="card">
+          <div class="card-image-wrap">
+            <span class="badge css">Arquitectura</span>
+            <img
+              src="../../../img/product.png"
+              alt="BEM Architecture"
+              class="card-img"
+            />
+          </div>
+          <div class="card-content">
+            <h2 class="card-title">
+              Escalando CSS puro en proyectos Enterprise
+            </h2>
+            <p class="card-text">
+              Aplicando metodologías de nombres estrictos como BEM y organizando
+              tus archivos para no depender forzosamente de Tailwind o
+              Bootstrap.
+            </p>
+            <a href="#" class="btn-read-more">Leer más</a>
+          </div>
+        </article>
+      </div>
+    </main>
+  </body>
+</html>

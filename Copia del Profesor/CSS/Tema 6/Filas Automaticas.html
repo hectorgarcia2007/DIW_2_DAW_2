@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tema 6 Ej 3: Grid Auto Rows</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f1f5f9;
+        padding: 40px;
+        color: #1e293b;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #0d9488;
+        /* Teal-600 */
+      }
+
+      /* CONFIGURACIÓN DEL GRID SOLICITADA */
+      .contenedor-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* 2 columnas para forzar 2 filas con 4 items */
+        grid-auto-rows: 80px;
+        /* REQUISITO: Filas automáticas de 80px */
+
+        gap: 15px;
+        background-color: #ccfbf1;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px dashed #5eead4;
+      }
+
+      .item {
+        background-color: #14b8a6;
+        /* Teal-500 */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      .item-con-contenido {
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      .explicacion {
+        margin-top: 30px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+      }
+
+      code {
+        background: #f1f5f9;
+        padding: 2px 4px;
+        border-radius: 4px;
+        color: #0f766e;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Ejercicio 3: Filas Automáticas (grid-auto-rows)</h1>
+    <p>
+      La propiedad <code>grid-auto-rows</code> define el tamaño de las filas que
+      se crean automáticamente cuando el contenido excede las filas definidas
+      explícitamente.
+    </p>
+
+    <div class="contenedor-grid">
+      <div class="item">Item 1</div>
+      <div class="item">Item 2</div>
+      <div class="item item-con-contenido">Item 3 (Fila auto)</div>
+      <div class="item">Item 4 (Fila auto)</div>
+    </div>
+
+    <div class="explicacion">
+      <p><strong>Observaciones:</strong></p>
+      <ul>
+        <li>
+          Hemos definido un grid de 2 columnas pero
+          <strong>no hemos definido filas</strong> explícitamente.
+        </li>
+        <li>Al haber 4 items, el navegador crea automáticamente 2 filas.</li>
+        <li>
+          Gracias a <code>grid-auto-rows: 80px;</code>, todas esas filas creadas
+          implícitamente tienen exactamente 80px de alto.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

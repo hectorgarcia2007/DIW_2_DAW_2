@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C_T8_Ej1: Hero Full Height</title>
+    <style>
+              body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+              body { margin: 0; padding: 0; font-family: system-ui, sans-serif; }
+      .hero-section {
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          text-align: center;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+      .hero-title {
+          font-size: clamp(2rem, 5vw, 4rem);
+          margin: 0 0 1rem 0;
+          text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      .hero-subtitle {
+          font-size: clamp(1rem, 2vw, 1.5rem);
+          font-weight: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-section">
+      <div>
+        <h1 class="hero-title">Bienvenido a CSS Responsive</h1>
+        <p class="hero-subtitle">
+          Esta sección siempre ocupará toda tu pantalla, centrándose
+          fluidamente.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

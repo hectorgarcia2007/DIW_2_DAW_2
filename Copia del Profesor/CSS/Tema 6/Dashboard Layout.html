@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Tema 6 Ej 5: Dashboard Grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f8fafc;
+        padding: 20px;
+        color: #334155;
+        min-height: 100vh;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #4338ca;
+        text-align: center;
+      }
+
+      /* CONFIGURACIÓN DEL GRID SOLICITADA */
+      .dashboard {
+        display: grid;
+        /* 3 columnas */
+        grid-template-columns: 200px 1fr 1fr;
+        /* 4 filas (Header, Content, Ads, Footer) */
+        grid-template-rows: 60px 1fr 1fr 60px;
+
+        /* Usamos áreas para que sea más intuitivo según el enunciado */
+        grid-template-areas:
+          "header header header"
+          "sidebar content content"
+          "sidebar ads ads"
+          "footer footer footer";
+
+        gap: 15px;
+        height: 80vh;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Asignación de áreas */
+      .header {
+        grid-area: header;
+        background: linear-gradient(135deg, #6366f1, #4338ca);
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background: linear-gradient(135deg, #3b82f6, #2563eb);
+      }
+
+      .content {
+        grid-area: content;
+        background: linear-gradient(135deg, #10b981, #059669);
+      }
+
+      .ads {
+        grid-area: ads;
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+      }
+
+      .footer {
+        grid-area: footer;
+        background: linear-gradient(135deg, #64748b, #475569);
+      }
+
+      .info {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #64748b;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Ejercicio 5: Dashboard Complex Layout</h1>
+
+    <!-- HTML Proporcionado por el ejercicio -->
+    <div class="dashboard">
+      <div class="item header">Header</div>
+      <div class="item sidebar">Sidebar</div>
+      <div class="item content">Content</div>
+      <div class="item ads">Ads</div>
+      <div class="item footer">Footer</div>
+    </div>
+
+    <div class="info">
+      Este layout utiliza <strong>grid-template-areas</strong> para distribuir
+      los elementos en un sistema de 3 columnas.<br />
+      El sidebar ocupa 2 celdas verticales y el Header/Footer ocupan el ancho
+      completo.
+    </div>
+  </body>
+</html>

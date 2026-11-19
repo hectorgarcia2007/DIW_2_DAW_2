@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C_T6_Ej7: Grid Responsive Auto Fit</title>
+    <style>
+              body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+              .grid-responsive {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 20px;
+      }
+      .card {
+          background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          display: flex; flex-direction: column; align-items: center; text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Redimensiona la ventana para ver cómo fluyen las tarjetas (auto-fit y
+      minmax).
+    </p>
+    <div class="grid-responsive">
+      <div class="card">
+        <h3>Producto A</h3>
+        <p>Descripción.</p>
+      </div>
+      <div class="card">
+        <h3>Producto B</h3>
+        <p>Descripción.</p>
+      </div>
+      <div class="card">
+        <h3>Producto C</h3>
+        <p>Descripción.</p>
+      </div>
+      <div class="card">
+        <h3>Producto D</h3>
+        <p>Descripción.</p>
+      </div>
+    </div>
+  </body>
+</html>

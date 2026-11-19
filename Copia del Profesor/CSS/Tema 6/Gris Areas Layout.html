@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C_T6_Ej4: Grid Areas Layout</title>
+    <style>
+              body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+              .layout-grid {
+          display: grid;
+          grid-template-areas:
+              "header header header"
+              "menu main sidebar"
+              "footer footer footer";
+          grid-template-columns: 200px 1fr 250px;
+          grid-template-rows: 60px 400px 50px;
+          gap: 10px;
+      }
+      .area { padding: 15px; font-weight: bold; text-align: center; color: white; border-radius: 6px; }
+      .header { grid-area: header; background-color: #212529; }
+      .menu { grid-area: menu; background-color: #6c757d; }
+      .main { grid-area: main; background-color: #0d6efd; }
+      .sidebar { grid-area: sidebar; background-color: #dc3545; }
+      .footer { grid-area: footer; background-color: #198754; }
+    </style>
+  </head>
+  <body>
+    <div class="layout-grid">
+      <div class="area header">Header</div>
+      <div class="area menu">Menu</div>
+      <div class="area main">Main Content</div>
+      <div class="area sidebar">Sidebar</div>
+      <div class="area footer">Footer</div>
+    </div>
+  </body>
+</html>

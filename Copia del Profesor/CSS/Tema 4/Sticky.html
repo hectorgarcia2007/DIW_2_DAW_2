@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Ej6: Menú Sticky</title>
+    <style>
+      /* Reset básico */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+
+      body {
+        background-color: #f8fafc;
+        color: #334155;
+        line-height: 1.6;
+        /* Scroll padding para que los enlaces internos no queden tapados por el header sticky */
+        scroll-padding-top: 80px;
+        scroll-behavior: smooth;
+      }
+
+      /* HEADER STICKY */
+      .header-sticky {
+        /* Propiedades Clave */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        /* Estilos estéticos */
+        background-color: #0f172a;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-sticky h1 {
+        font-size: 1.5rem;
+        color: #38bdf8;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        color: #cbd5e1;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: white;
+      }
+
+      /* BANNER */
+      .banner {
+        background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        color: white;
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+
+      .banner h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      /* CONTENIDO EXTENSO */
+      main {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      section {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+      }
+
+      section h3 {
+        color: #1e293b;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 0.5rem;
+      }
+
+      section p {
+        margin-bottom: 1rem;
+      }
+
+      .indicador-scroll {
+        text-align: center;
+        color: #94a3b8;
+        font-style: italic;
+        margin: 4rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header que se quedará pegado usando position: sticky -->
+    <header class="header-sticky">
+      <h1>MiWeb Sticky</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#seccion1">Sección 1</a></li>
+          <li><a href="#seccion2">Sección 2</a></li>
+          <li><a href="#seccion3">Sección 3</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="banner" id="inicio">
+      <h2>Bienvenido a la página</h2>
+      <p>
+        Haz scroll hacia abajo y observa cómo el menú superior te acompaña en
+        todo momento.
+      </p>
+    </div>
+
+    <!-- Mucho contenido para forzar el scroll -->
+    <main>
+      <section id="seccion1">
+        <h3>Sección 1: El porqué del Sticky</h3>
+        <p>
+          El posicionamiento <strong>sticky</strong> es una mezcla de
+          posicionamiento relativo y fijo. El elemento actúa como relativo hasta
+          que cruza un umbral específico (como top: 0), momento en el que pasa a
+          comportarse como fijado en la pantalla.
+        </p>
+        <p>
+          A diferencia de <code>position: fixed</code>, un elemento sticky no
+          pierde su espacio en el documento antes de fijarse, lo que evita que
+          el contenido subyacente salte hacia arriba abruptamente.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
+          mauris. Vivamus hendrerit arcu sed erat molestie vehicula.
+        </p>
+      </section>
+
+      <p class="indicador-scroll">Sigue bajando... ↓</p>
+
+      <section id="seccion2">
+        <h3>Sección 2: Más Contenido de Relleno</h3>
+        <p>
+          Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales
+          pellentesque elementum. Mauris porttitor, ligula id malesuada mattis,
+          miblandit libero, nec mattis orci ex id risus.
+        </p>
+        <p>
+          Cras in lacinia nibh. Suspendisse potenti. Integer fermentum lacinia
+          egestas. Morbi elementum scelerisque rhoncus. Cras condimentum rhoncus
+          tellus ac dignissim.
+        </p>
+        <p>
+          Nam rhoncus metus eros, auctor semper erat imperdiet sed. Phasellus
+          vitae dolor et lorem pellentesque efficitur. Mauris porttitor.
+        </p>
+      </section>
+
+      <p class="indicador-scroll">Casi llegamos al fondo... ↓</p>
+
+      <section id="seccion3">
+        <h3>Sección 3: Fin de la página</h3>
+        <p>
+          Incluso al llegar al final de este extenso artículo, el usuario no
+          tiene que hacer scroll de vuelta hacia arriba de forma manual para
+          navegar a otra página; el menú sigue estando accesible en la parte
+          superior.
+        </p>
+        <p>
+          Esta técnica mejora increíblemente la usabilidad de artículos largos
+          de blogs, tiendas e-commerce o páginas web formativas.
+        </p>
+      </section>
+
+      <p class="indicador-scroll">Fin del documento.</p>
+    </main>
+  </body>
+</html>
