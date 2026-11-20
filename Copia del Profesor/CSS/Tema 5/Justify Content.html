@@ -1,31 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>C_T5_Ej3: Flex Justify</title>
     <style>
-        body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
-        .flex-container {
-    display: flex;
-    flex-direction: row;
-    width: 500px;
-    background-color: #dee2e6;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-}
-.flex-item { background-color: coral; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; border-radius: 4px; }
-.jc-start { justify-content: flex-start; }
-.jc-center { justify-content: center; }
-.jc-between { justify-content: space-between; }
-.jc-evenly { justify-content: space-evenly; }
+              body {{ font-family: system-ui, sans-serif; padding: 20px; background-color: #f8f9fa; color: #333; }}
+              .flex-container {
+          display: flex;
+          flex-direction: row;
+          width: 500px;
+          background-color: #dee2e6;
+          padding: 10px;
+          margin-bottom: 20px;
+          border-radius: 8px;
+      }
+      .flex-item { background-color: coral; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; border-radius: 4px; }
+      .jc-start { justify-content: flex-start; }
+      .jc-center { justify-content: center; }
+      .jc-between { justify-content: space-between; }
+      .jc-evenly { justify-content: space-evenly; }
     </style>
-</head>
-<body>
-    <h3>flex-start</h3><div class="flex-container jc-start"><div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div></div>
-<h3>center</h3><div class="flex-container jc-center"><div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div></div>
-<h3>space-between</h3><div class="flex-container jc-between"><div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div></div>
-<h3>space-evenly</h3><div class="flex-container jc-evenly"><div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div></div>
-</body>
+  </head>
+  <body>
+    <h3>flex-start</h3>
+    <div class="flex-container jc-start">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <h3>center</h3>
+    <div class="flex-container jc-center">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <h3>space-between</h3>
+    <div class="flex-container jc-between">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+    <h3>space-evenly</h3>
+    <div class="flex-container jc-evenly">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </body>
 </html>
